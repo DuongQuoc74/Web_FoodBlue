@@ -6,4 +6,5 @@
  - Microsoft.EntityFrameworkCore.SqlServer (Data)
  - Microsoft.EntityFrameworkCore.Tools (Data)
  - Microsoft.EntityFrameworkCore.Design (Data)
+ - Microsoft.EntityFrameworkCore (Data)
  - Microsoft.AspNet.Identity.EntityFrameworkCore (Data)

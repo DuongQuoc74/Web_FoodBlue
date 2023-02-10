@@ -11,8 +11,12 @@ namespace eShopSolution.Data.Entities
         public decimal OriginalPrice { get; set; }
         public decimal Stock { get; set; }
         public int ViewCout { get; set; }
-        public bool IsFeartured { get; set; }
+        public bool? IsFeartured { get; set; }
         public DateTime DateCreate { get; set; }
+        public List<ProductInCategory> ProductInCategories { get; set; }
+        public List<ProductTranslation> ProductTranslations { get; set; }
+        public List<ProductImage> ProductImages { get; set; }
+        public List<OrderDetail> OrderDetail { get; set; }
         
     }
 }

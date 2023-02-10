@@ -7,8 +7,9 @@ namespace eShopSolution.Data.Entities
 {
     public class AppUser :IdentityUser<Guid>
     {
-        public string FirtName { get; set; }
+        public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime Dob { get; set; }
+        public List<Order> Order { get; set; }
     }
 }
