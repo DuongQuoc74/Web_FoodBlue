@@ -35,6 +35,7 @@ namespace eShopSolution.Data.EF
             modelBuilder.ApplyConfiguration(new LanguageConfiguration());
             modelBuilder.ApplyConfiguration(new OrderConfiguration());
             modelBuilder.ApplyConfiguration(new OrderDetailConfiguration());
+            modelBuilder.ApplyConfiguration(new CartConfiguration ());
         }
         public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<AppRole> AppRoles { get; set; }
@@ -44,5 +45,10 @@ namespace eShopSolution.Data.EF
         public DbSet<Category> Categories { get; set; }
         public DbSet<CategoryTranslation> CategoriesTranslations { get; set; }
         public DbSet<ProductInCategory> ProductInCategories { get; set; }
+        public DbSet<Cart> Carts { get; set; }
+        public DbSet<Language> Languages { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrdersDetails { get; set;}
+
     }
 }
