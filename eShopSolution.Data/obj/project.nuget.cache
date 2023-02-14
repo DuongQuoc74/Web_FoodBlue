@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "BWbqyhng2mObpY1XlzNv+1dm0fGjqKEsMI6u98WxZmFnTBbHVRhm8kqg5LWgwqbXIsEbtF6PW8WOz2jTBH93KA==",
+  "dgSpecHash": "HI0hXLWzYWSUBZkwtLRR7vuaVRo0ZpZhF+DLTWTM2/fWg/nbXNH6k05jSGUPDiEzxp89FfQins6I2/94fuOW9A==",
   "success": true,
   "projectFilePath": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopSolution.Data\\eShopSolution.Data.csproj",
   "expectedPackageFiles": [
@@ -23,8 +23,13 @@
     "C:\\Users\\duong\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.1\\microsoft.extensions.configuration.3.1.1.nupkg.sha512",
     "C:\\Users\\duong\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.1\\microsoft.extensions.configuration.abstractions.3.1.1.nupkg.sha512",
     "C:\\Users\\duong\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.1.1\\microsoft.extensions.configuration.binder.3.1.1.nupkg.sha512",
+    "C:\\Users\\duong\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\3.1.1\\microsoft.extensions.configuration.fileextensions.3.1.1.nupkg.sha512",
+    "C:\\Users\\duong\\.nuget\\packages\\microsoft.extensions.configuration.json\\3.1.1\\microsoft.extensions.configuration.json.3.1.1.nupkg.sha512",
     "C:\\Users\\duong\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.1\\microsoft.extensions.dependencyinjection.3.1.1.nupkg.sha512",
     "C:\\Users\\duong\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.1\\microsoft.extensions.dependencyinjection.abstractions.3.1.1.nupkg.sha512",
+    "C:\\Users\\duong\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\3.1.1\\microsoft.extensions.fileproviders.abstractions.3.1.1.nupkg.sha512",
+    "C:\\Users\\duong\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\3.1.1\\microsoft.extensions.fileproviders.physical.3.1.1.nupkg.sha512",
+    "C:\\Users\\duong\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\3.1.1\\microsoft.extensions.filesystemglobbing.3.1.1.nupkg.sha512",
     "C:\\Users\\duong\\.nuget\\packages\\microsoft.extensions.identity.core\\3.1.1\\microsoft.extensions.identity.core.3.1.1.nupkg.sha512",
     "C:\\Users\\duong\\.nuget\\packages\\microsoft.extensions.identity.stores\\3.1.1\\microsoft.extensions.identity.stores.3.1.1.nupkg.sha512",
     "C:\\Users\\duong\\.nuget\\packages\\microsoft.extensions.logging\\3.1.1\\microsoft.extensions.logging.3.1.1.nupkg.sha512",

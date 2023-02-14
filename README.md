@@ -8,3 +8,4 @@
  - Microsoft.EntityFrameworkCore.Design (Data)
  - Microsoft.EntityFrameworkCore (Data)
  - Microsoft.AspNet.Identity.EntityFrameworkCore (Data)
+ - Microsoft.Extensions.Configuration.Json(MigrationDataBase)
