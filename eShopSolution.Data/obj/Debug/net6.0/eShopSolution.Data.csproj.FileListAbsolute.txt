@@ -1,0 +1,14 @@
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Data\bin\Debug\net6.0\eShopSolution.Data.deps.json
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Data\bin\Debug\net6.0\eShopSolution.Data.runtimeconfig.json
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Data\bin\Debug\net6.0\eShopSolution.Data.dll
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Data\bin\Debug\net6.0\eShopSolution.Data.pdb
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Data\obj\Debug\net6.0\eShopSolution.Data.csproj.AssemblyReference.cache
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Data\obj\Debug\net6.0\eShopSolution.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Data\obj\Debug\net6.0\eShopSolution.Data.AssemblyInfoInputs.cache
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Data\obj\Debug\net6.0\eShopSolution.Data.AssemblyInfo.cs
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Data\obj\Debug\net6.0\eShopSolution.Data.csproj.CoreCompileInputs.cache
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Data\obj\Debug\net6.0\eShopSolution.Data.dll
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Data\obj\Debug\net6.0\refint\eShopSolution.Data.dll
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Data\obj\Debug\net6.0\eShopSolution.Data.pdb
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Data\obj\Debug\net6.0\eShopSolution.Data.genruntimeconfig.cache
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Data\obj\Debug\net6.0\ref\eShopSolution.Data.dll

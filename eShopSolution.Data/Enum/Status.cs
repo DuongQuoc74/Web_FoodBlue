@@ -8,5 +8,6 @@ namespace eShopSolution.Data.Enum
     {
         Active, 
         InActive
+      
     }
 }
