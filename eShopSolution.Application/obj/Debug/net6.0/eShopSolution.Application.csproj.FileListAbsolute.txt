@@ -1,0 +1,17 @@
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Application\bin\Debug\net6.0\eShopSolution.Application.deps.json
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Application\bin\Debug\net6.0\eShopSolution.Application.dll
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Application\bin\Debug\net6.0\eShopSolution.Application.pdb
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Application\bin\Debug\net6.0\eShopSolution.Data.dll
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Application\bin\Debug\net6.0\eShopSolution.ViewModel.dll
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Application\bin\Debug\net6.0\eShopSolution.Data.pdb
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Application\bin\Debug\net6.0\eShopSolution.ViewModel.pdb
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Application\obj\Debug\net6.0\eShopSolution.Application.csproj.AssemblyReference.cache
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Application\obj\Debug\net6.0\eShopSolution.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Application\obj\Debug\net6.0\eShopSolution.Application.AssemblyInfoInputs.cache
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Application\obj\Debug\net6.0\eShopSolution.Application.AssemblyInfo.cs
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Application\obj\Debug\net6.0\eShopSolution.Application.csproj.CoreCompileInputs.cache
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Application\obj\Debug\net6.0\eShopSolution.Application.csproj.CopyComplete
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Application\obj\Debug\net6.0\eShopSolution.Application.dll
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Application\obj\Debug\net6.0\refint\eShopSolution.Application.dll
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Application\obj\Debug\net6.0\eShopSolution.Application.pdb
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Application\obj\Debug\net6.0\ref\eShopSolution.Application.dll

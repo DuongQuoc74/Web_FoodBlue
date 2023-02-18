@@ -1,0 +1,12 @@
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ViewModel\bin\Debug\net6.0\eShopSolution.ViewModel.deps.json
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ViewModel\bin\Debug\net6.0\eShopSolution.ViewModel.dll
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ViewModel\bin\Debug\net6.0\eShopSolution.ViewModel.pdb
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ViewModel\obj\Debug\net6.0\eShopSolution.ViewModel.csproj.AssemblyReference.cache
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ViewModel\obj\Debug\net6.0\eShopSolution.ViewModel.GeneratedMSBuildEditorConfig.editorconfig
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ViewModel\obj\Debug\net6.0\eShopSolution.ViewModel.AssemblyInfoInputs.cache
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ViewModel\obj\Debug\net6.0\eShopSolution.ViewModel.AssemblyInfo.cs
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ViewModel\obj\Debug\net6.0\eShopSolution.ViewModel.csproj.CoreCompileInputs.cache
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ViewModel\obj\Debug\net6.0\eShopSolution.ViewModel.dll
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ViewModel\obj\Debug\net6.0\refint\eShopSolution.ViewModel.dll
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ViewModel\obj\Debug\net6.0\eShopSolution.ViewModel.pdb
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ViewModel\obj\Debug\net6.0\ref\eShopSolution.ViewModel.dll
