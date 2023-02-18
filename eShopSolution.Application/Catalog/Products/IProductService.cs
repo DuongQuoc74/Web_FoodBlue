@@ -1,4 +1,5 @@
 ﻿using eShopSolution.ViewModel.Catalog.Product;
+using eShopSolution.ViewModel.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,8 @@ namespace eShopSolution.Application.Catalog.Products
     {
         Task<ProductVM> GetById (int id, string languageId);
         Task<int> CreateProduct(ProductCreateRequest request);
+        Task<int> DeleteProduct(int ProductId);
+        Task<int> UpdateProduct(ProductUpdateRequest request);
+        
     }
 }

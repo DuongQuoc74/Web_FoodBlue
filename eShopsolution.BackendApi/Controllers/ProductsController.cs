@@ -10,7 +10,7 @@ namespace eShopsolution.BackendApi.Controllers
     public class ProductsController : ControllerBase
     {
         private readonly IProductService _productService;
-        public ProductsController(IProductService productService )
+        public ProductsController(IProductService productService)
         {
             _productService = productService;
         }
@@ -35,6 +35,33 @@ namespace eShopsolution.BackendApi.Controllers
                 return BadRequest("LanguageId không được trống");
             var product = await _productService.GetById(productId, request.LanguageId);
             return CreatedAtAction(nameof(GetById), new { id = productId }, product);
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> DeleteProduct(int ProductId)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var result = await _productService.DeleteProduct(ProductId);
+            if (result == 0)
+                return BadRequest("Xóa sản phẩm không thành công!");
+            return Ok();
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> UpdateProduct([FromForm] ProductUpdateRequest request)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var result = await _productService.UpdateProduct(request);
+            if (result != 0)
+                return BadRequest("Xóa sản phẩm thất bại!");
+            if (request.LanguageId == null)
+                return BadRequest("LanguageId không được để trống");
+
+            var product = await _productService.GetById(request.ProductId, request.LanguageId);
+
+            return Ok( product);
         }
     }
 }

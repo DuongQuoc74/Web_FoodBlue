@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "03U4P8nq+2e14qaJip8itmraL/XkgG2oU/5Nscc3UBc=",
+  "Hash": "2tc8N898oXQg/vtX46WTu/0thrRwjnvWTuhVJku67q8=",
   "Source": "eShopsolution.BackendApi",
   "BasePath": "_content/eShopsolution.BackendApi",
   "Mode": "Default",
@@ -1037,6 +1037,23 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
+      "Identity": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopsolution.BackendApi\\wwwroot\\user_content\\038d01e2-e436-432b-9d0f-bab9d7074d6d.PNG",
+      "SourceId": "eShopsolution.BackendApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopsolution.BackendApi\\wwwroot\\",
+      "BasePath": "_content/eShopsolution.BackendApi",
+      "RelativePath": "user_content/038d01e2-e436-432b-9d0f-bab9d7074d6d.PNG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\user_content\\038d01e2-e436-432b-9d0f-bab9d7074d6d.PNG"
+    },
+    {
       "Identity": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopsolution.BackendApi\\wwwroot\\user_content\\47eb25d0-e600-4b0c-802b-eef020e3eeb3.jpg",
       "SourceId": "eShopsolution.BackendApi",
       "SourceType": "Discovered",
@@ -1052,6 +1069,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\user_content\\47eb25d0-e600-4b0c-802b-eef020e3eeb3.jpg"
+    },
+    {
+      "Identity": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopsolution.BackendApi\\wwwroot\\user_content\\54d27d8c-c26d-4c9d-a774-69b1c6dbeeb9.jpg",
+      "SourceId": "eShopsolution.BackendApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopsolution.BackendApi\\wwwroot\\",
+      "BasePath": "_content/eShopsolution.BackendApi",
+      "RelativePath": "user_content/54d27d8c-c26d-4c9d-a774-69b1c6dbeeb9.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\user_content\\54d27d8c-c26d-4c9d-a774-69b1c6dbeeb9.jpg"
+    },
+    {
+      "Identity": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopsolution.BackendApi\\wwwroot\\user_content\\67551990-321a-45f4-a59e-61882b0b61f4.PNG",
+      "SourceId": "eShopsolution.BackendApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopsolution.BackendApi\\wwwroot\\",
+      "BasePath": "_content/eShopsolution.BackendApi",
+      "RelativePath": "user_content/67551990-321a-45f4-a59e-61882b0b61f4.PNG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\user_content\\67551990-321a-45f4-a59e-61882b0b61f4.PNG"
     },
     {
       "Identity": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopsolution.BackendApi\\wwwroot\\user_content\\810de691-9022-447c-a581-1f8b387089db.jpg",
@@ -1071,6 +1122,23 @@
       "OriginalItemSpec": "wwwroot\\user_content\\810de691-9022-447c-a581-1f8b387089db.jpg"
     },
     {
+      "Identity": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopsolution.BackendApi\\wwwroot\\user_content\\ac8fcec5-b5dd-4ce0-8ca2-e0f1f2c7bdab.jpg",
+      "SourceId": "eShopsolution.BackendApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopsolution.BackendApi\\wwwroot\\",
+      "BasePath": "_content/eShopsolution.BackendApi",
+      "RelativePath": "user_content/ac8fcec5-b5dd-4ce0-8ca2-e0f1f2c7bdab.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\user_content\\ac8fcec5-b5dd-4ce0-8ca2-e0f1f2c7bdab.jpg"
+    },
+    {
       "Identity": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopsolution.BackendApi\\wwwroot\\user_content\\b10162c8-e65f-4772-9dd0-924824dbf157.jpg",
       "SourceId": "eShopsolution.BackendApi",
       "SourceType": "Discovered",
@@ -1086,6 +1154,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\user_content\\b10162c8-e65f-4772-9dd0-924824dbf157.jpg"
+    },
+    {
+      "Identity": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopsolution.BackendApi\\wwwroot\\user_content\\b37655a7-aafd-4a0f-bbcf-e99b3a7af600.jpg",
+      "SourceId": "eShopsolution.BackendApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopsolution.BackendApi\\wwwroot\\",
+      "BasePath": "_content/eShopsolution.BackendApi",
+      "RelativePath": "user_content/b37655a7-aafd-4a0f-bbcf-e99b3a7af600.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\user_content\\b37655a7-aafd-4a0f-bbcf-e99b3a7af600.jpg"
     },
     {
       "Identity": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopsolution.BackendApi\\wwwroot\\user_content\\b4ce1f87-57e6-41ac-a5d0-eca97a4ef8ba.jpg",
@@ -1120,6 +1205,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\user_content\\b8195a8f-246c-4c9a-9bef-800f2dec5757.jpg"
+    },
+    {
+      "Identity": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopsolution.BackendApi\\wwwroot\\user_content\\f9080757-98fc-4ce1-a233-644d1aa8a44b.PNG",
+      "SourceId": "eShopsolution.BackendApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopsolution.BackendApi\\wwwroot\\",
+      "BasePath": "_content/eShopsolution.BackendApi",
+      "RelativePath": "user_content/f9080757-98fc-4ce1-a233-644d1aa8a44b.PNG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\user_content\\f9080757-98fc-4ce1-a233-644d1aa8a44b.PNG"
     }
   ]
 }

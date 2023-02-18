@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace eShopSolution.ViewModel
+namespace eShopSolution.ViewModel.System.Languages
 {
     public class LanguageVM
     {

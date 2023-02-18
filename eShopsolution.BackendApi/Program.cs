@@ -3,7 +3,10 @@ using eShopSolution.Application.Catalog.Categories;
 using eShopSolution.Application.Catalog.Products;
 using eShopSolution.Application.Comons;
 using eShopSolution.Application.Systems.Languages;
+using eShopSolution.Application.Systems.Users;
 using eShopSolution.Data.EF;
+using eShopSolution.Data.Entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
@@ -14,6 +17,9 @@ var Configuration = new ConfigurationBuilder()
 // kết nối Database
 builder.Services.AddDbContext<EShopDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString(SystemContants.MainConnecStrings)));
+builder.Services.AddIdentity<AppUser, AppRole>()
+    .AddEntityFrameworkStores<EShopDbContext>()
+    .AddDefaultTokenProviders();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -29,6 +35,11 @@ builder.Services.AddTransient<ICategoryService, CategoryService>();
 builder.Services.AddTransient<IProductService, ProductService>();
 builder.Services.AddTransient<IStorageService, StorageService>();
 
+builder.Services.AddTransient<IUserService, UserService>();
+builder.Services.AddTransient<UserManager<AppUser>,UserManager<AppUser>>();
+builder.Services.AddTransient<SignInManager<AppUser>,SignInManager<AppUser>>();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -42,6 +53,7 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
+app.UseAuthentication();
 app.UseRouting();
 
 app.UseAuthorization();

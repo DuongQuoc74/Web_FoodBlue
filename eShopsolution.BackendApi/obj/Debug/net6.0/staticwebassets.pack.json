@@ -241,16 +241,36 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopsolution.BackendApi\\wwwroot\\user_content\\038d01e2-e436-432b-9d0f-bab9d7074d6d.PNG",
+      "PackagePath": "staticwebassets\\user_content\\038d01e2-e436-432b-9d0f-bab9d7074d6d.PNG"
+    },
+    {
       "Id": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopsolution.BackendApi\\wwwroot\\user_content\\47eb25d0-e600-4b0c-802b-eef020e3eeb3.jpg",
       "PackagePath": "staticwebassets\\user_content\\47eb25d0-e600-4b0c-802b-eef020e3eeb3.jpg"
+    },
+    {
+      "Id": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopsolution.BackendApi\\wwwroot\\user_content\\54d27d8c-c26d-4c9d-a774-69b1c6dbeeb9.jpg",
+      "PackagePath": "staticwebassets\\user_content\\54d27d8c-c26d-4c9d-a774-69b1c6dbeeb9.jpg"
+    },
+    {
+      "Id": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopsolution.BackendApi\\wwwroot\\user_content\\67551990-321a-45f4-a59e-61882b0b61f4.PNG",
+      "PackagePath": "staticwebassets\\user_content\\67551990-321a-45f4-a59e-61882b0b61f4.PNG"
     },
     {
       "Id": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopsolution.BackendApi\\wwwroot\\user_content\\810de691-9022-447c-a581-1f8b387089db.jpg",
       "PackagePath": "staticwebassets\\user_content\\810de691-9022-447c-a581-1f8b387089db.jpg"
     },
     {
+      "Id": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopsolution.BackendApi\\wwwroot\\user_content\\ac8fcec5-b5dd-4ce0-8ca2-e0f1f2c7bdab.jpg",
+      "PackagePath": "staticwebassets\\user_content\\ac8fcec5-b5dd-4ce0-8ca2-e0f1f2c7bdab.jpg"
+    },
+    {
       "Id": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopsolution.BackendApi\\wwwroot\\user_content\\b10162c8-e65f-4772-9dd0-924824dbf157.jpg",
       "PackagePath": "staticwebassets\\user_content\\b10162c8-e65f-4772-9dd0-924824dbf157.jpg"
+    },
+    {
+      "Id": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopsolution.BackendApi\\wwwroot\\user_content\\b37655a7-aafd-4a0f-bbcf-e99b3a7af600.jpg",
+      "PackagePath": "staticwebassets\\user_content\\b37655a7-aafd-4a0f-bbcf-e99b3a7af600.jpg"
     },
     {
       "Id": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopsolution.BackendApi\\wwwroot\\user_content\\b4ce1f87-57e6-41ac-a5d0-eca97a4ef8ba.jpg",
@@ -259,6 +279,10 @@
     {
       "Id": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopsolution.BackendApi\\wwwroot\\user_content\\b8195a8f-246c-4c9a-9bef-800f2dec5757.jpg",
       "PackagePath": "staticwebassets\\user_content\\b8195a8f-246c-4c9a-9bef-800f2dec5757.jpg"
+    },
+    {
+      "Id": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopsolution.BackendApi\\wwwroot\\user_content\\f9080757-98fc-4ce1-a233-644d1aa8a44b.PNG",
+      "PackagePath": "staticwebassets\\user_content\\f9080757-98fc-4ce1-a233-644d1aa8a44b.PNG"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.eShopsolution.BackendApi.props",

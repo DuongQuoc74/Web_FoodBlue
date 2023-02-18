@@ -1,8 +1,10 @@
 ﻿using eShopsolution.Utilities.Constants;
+using eShopsolution.Utilities.Exceptions;
 using eShopSolution.Application.Comons;
 using eShopSolution.Data.EF;
 using eShopSolution.Data.Entities;
 using eShopSolution.ViewModel.Catalog.Product;
+using eShopSolution.ViewModel.Common;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -132,5 +134,48 @@ namespace eShopSolution.Application.Catalog.Products
             await _storageService.SaveFileAsync(file.OpenReadStream(), fileName);
             return "/" + USER_CONTENT_FOLDER_NAME + "/" + fileName;
         }
+
+        public async Task<int> DeleteProduct(int ProductId)
+        {
+           var product = await _context.Products.FindAsync(ProductId);
+            if (product == null)
+                throw new EShopException("ID sản phẩm không hợp lệ!");
+            var images = _context.ProductImages.Where(x => x.ProductId == ProductId);
+            foreach (var image in images)
+            {
+                await _storageService.DeleteFileAsync(image.ImagePath);
+            }
+              _context.Products.Remove(product);
+            return await _context.SaveChangesAsync();
+                
+        }
+
+        public async Task<int> UpdateProduct(ProductUpdateRequest request)
+        {
+            var product = await _context.Products.FindAsync(request.ProductId);
+            var productTranslation = await _context.ProductTranslations.FirstOrDefaultAsync(x=>x.ProductId== request.ProductId && x.LanguageId == request.LanguageId);
+            if (product == null || productTranslation == null)
+                throw new EShopException("Không tìm thấy sản phẩm!");
+            product.IsFeartured = request.IsFeartured;
+            productTranslation.Name= request.Name;
+            productTranslation.Description= request.Description;
+            productTranslation.Title= request.Title;
+            productTranslation.Detail= request.Detail;
+
+            if (request.ThumbNailImage != null)
+            {
+                var image= await _context.ProductImages.FirstOrDefaultAsync(x=>x.ProductId==request.ProductId);
+                if(image!=null)
+                {
+                    image.FileSize = request.ThumbNailImage.Length;
+                    image.ImagePath=await this.SaveFile(request.ThumbNailImage);
+                  await  _context.SaveChangesAsync();
+                }
+            }
+            return await _context.SaveChangesAsync();
+            
+        }
+
+       
     }
 }
