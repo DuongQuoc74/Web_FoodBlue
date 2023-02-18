@@ -5,7 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace eShopSolution.Application.Catalog.Category
+namespace eShopSolution.Application.Catalog.Categories
+
 {
     public interface ICategoryService
     {

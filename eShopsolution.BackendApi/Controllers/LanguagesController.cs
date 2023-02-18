@@ -1,4 +1,4 @@
-﻿using eShopSolution.Application.System.Languages;
+﻿using eShopSolution.Application.Systems.Languages;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

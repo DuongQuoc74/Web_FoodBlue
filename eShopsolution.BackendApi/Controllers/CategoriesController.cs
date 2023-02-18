@@ -1,4 +1,4 @@
-﻿using eShopSolution.Application.Catalog.Category;
+﻿using eShopSolution.Application.Catalog.Categories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

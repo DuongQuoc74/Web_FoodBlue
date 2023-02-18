@@ -9,5 +9,6 @@ namespace eShopsolution.Utilities.Constants
     public class SystemContants
     {
         public const string MainConnecStrings = "eShopSolutionDb";
+        public const string ProductCreate = "N/A";
     }
 }

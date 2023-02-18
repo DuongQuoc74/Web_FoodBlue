@@ -8,4 +8,7 @@
  - Microsoft.EntityFrameworkCore (Data)
  - Microsoft.AspNet.Identity.EntityFrameworkCore (Data)
  - Microsoft.Extensions.Configuration.Json(Data "MigrationDataBase")
+
  - Swashbuckle.AspNetCore (BackendApi)
+
+ -Microsoft.AspNetCore.Http.Features(ViewModel)

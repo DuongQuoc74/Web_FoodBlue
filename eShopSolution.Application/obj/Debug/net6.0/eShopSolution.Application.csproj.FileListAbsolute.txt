@@ -15,3 +15,5 @@ D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Application\obj\Deb
 D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Application\obj\Debug\net6.0\refint\eShopSolution.Application.dll
 D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Application\obj\Debug\net6.0\eShopSolution.Application.pdb
 D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Application\obj\Debug\net6.0\ref\eShopSolution.Application.dll
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Application\bin\Debug\net6.0\eShopsolution.Utilities.dll
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.Application\bin\Debug\net6.0\eShopsolution.Utilities.pdb

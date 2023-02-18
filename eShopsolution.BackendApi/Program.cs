@@ -1,7 +1,8 @@
 ﻿using eShopsolution.Utilities.Constants;
-using eShopSolution.Application.Catalog.Category;
-using eShopSolution.Application.Catalog.Product;
-using eShopSolution.Application.System.Languages;
+using eShopSolution.Application.Catalog.Categories;
+using eShopSolution.Application.Catalog.Products;
+using eShopSolution.Application.Comons;
+using eShopSolution.Application.Systems.Languages;
 using eShopSolution.Data.EF;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
@@ -26,6 +27,7 @@ builder.Services.AddSwaggerGen(c =>
 builder.Services.AddTransient<ILanguageService, LanguageService>();
 builder.Services.AddTransient<ICategoryService, CategoryService>();
 builder.Services.AddTransient<IProductService, ProductService>();
+builder.Services.AddTransient<IStorageService, StorageService>();
 
 var app = builder.Build();
 
