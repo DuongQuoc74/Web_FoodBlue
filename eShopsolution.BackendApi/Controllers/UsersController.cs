@@ -26,6 +26,17 @@ namespace eShopsolution.BackendApi.Controllers
             var result = await _userService.AuthenticateAdmin(request);
             if (string.IsNullOrEmpty(result.ResultObj))
                 return BadRequest(result);
+            return Ok(new {Token = result});
+        }
+
+        [AllowAnonymous]
+        [HttpPost("Register")]
+        public async Task<IActionResult> Register([FromForm] RegisterRequest request)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            var result = await _userService.Register(request);
+            if(result.IsSuccessed==false)
+                return BadRequest(result.Message);
             return Ok(result);
         }
     }

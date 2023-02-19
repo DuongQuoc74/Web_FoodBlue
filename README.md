@@ -10,5 +10,6 @@
  - Microsoft.Extensions.Configuration.Json(Data "MigrationDataBase")
 
  - Swashbuckle.AspNetCore (BackendApi)
+ - Microsoft.AspNetCore.Authentication.JwtBearer(BackendApi)
 
  -Microsoft.AspNetCore.Http.Features(ViewModel)

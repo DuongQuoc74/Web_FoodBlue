@@ -11,5 +11,7 @@ namespace eShopSolution.Application.Systems.Users
     public interface IUserService
     {
         Task<ApiResult<string>> AuthenticateAdmin(LoginRequest request);
+        Task<ApiResult<bool>> Register(RegisterRequest request);
+        
     }
 }

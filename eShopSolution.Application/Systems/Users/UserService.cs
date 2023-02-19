@@ -2,6 +2,7 @@
 using eShopSolution.ViewModel.Common;
 using eShopSolution.ViewModel.System.Users;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -45,6 +46,31 @@ namespace eShopSolution.Application.Systems.Users
                 expires: DateTime.Now.AddHours(3),
                 signingCredentials: creds);
             return new ApiSuccessResult<string>( new JwtSecurityTokenHandler().WriteToken(token) );
+        }
+
+        public async Task<ApiResult<bool>> Register(RegisterRequest request)
+        {
+            var user = await _userManager.FindByNameAsync(request.UserName);
+            if (user != null) return new ApiErrorResult<bool>("Tài khoản đã tồn tại");
+            var email =await _userManager.FindByEmailAsync(request.Email);
+            if (email != null) return new ApiErrorResult<bool>("Email đã tồn tại");
+            var phone = await _userManager.Users.AnyAsync(x=>x.PhoneNumber== request.PhoneNumber);
+            if (phone == true) return new ApiErrorResult<bool>("Số điện thoại đã tồn tại");
+            if(request.Password!=request.ComfirmPassword) return new ApiErrorResult<bool>("Mật khẩu không khớp!");
+            user = new AppUser()
+            {
+                UserName = request.UserName,
+                FirstName = request.FirstName,
+                LastName = request.LastName,
+                Email = request.Email,
+                PhoneNumber = request.PhoneNumber,
+                Dob = request.Dob
+
+            };
+
+            var result = await _userManager.CreateAsync(user, request.Password);
+            if (result.Succeeded==false) return new ApiErrorResult<bool>("Đăng kí tài khoản không thành công");
+            return new ApiSuccessResult<bool>();
         }
     }
 }

@@ -71,3 +71,4 @@ D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopsolution.BackendApi\obj\Debu
 D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopsolution.BackendApi\obj\Debug\net6.0\eShopsolution.BackendApi.pdb
 D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopsolution.BackendApi\obj\Debug\net6.0\eShopsolution.BackendApi.genruntimeconfig.cache
 D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopsolution.BackendApi\obj\Debug\net6.0\ref\eShopsolution.BackendApi.dll
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopsolution.BackendApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
