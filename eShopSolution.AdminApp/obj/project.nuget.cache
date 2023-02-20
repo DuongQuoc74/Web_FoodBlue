@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "9fHm5Gyje0S3NEzFXQL2AiLcDqOAwuo1fc4DIE+/7GxD0cHNvmJhBflANBg0mVt+SMxXoi6YF4tJHmPTI4NCqw==",
+  "dgSpecHash": "r+9dzUOLMUKNMtakzaxioYM1ODe21qQyWXiCSyTirWbXRmaVEd41L0O6GXJQSgQHzuPhmp9zHSF0sdz96xeyag==",
   "success": true,
   "projectFilePath": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopSolution.AdminApp\\eShopSolution.AdminApp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\duong\\.nuget\\packages\\lazziya.expresslocalization\\4.0.4\\lazziya.expresslocalization.4.0.4.nupkg.sha512",
+    "C:\\Users\\duong\\.nuget\\packages\\lazziya.taghelpers\\6.0.2\\lazziya.taghelpers.6.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

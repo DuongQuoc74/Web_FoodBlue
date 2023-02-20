@@ -29,3 +29,16 @@ D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\obj\Debug\
 D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\obj\Debug\net6.0\eShopSolution.AdminApp.pdb
 D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\obj\Debug\net6.0\eShopSolution.AdminApp.genruntimeconfig.cache
 D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\obj\Debug\net6.0\ref\eShopSolution.AdminApp.dll
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\bin\Debug\net6.0\en\eShopSolution.AdminApp.resources.dll
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\bin\Debug\net6.0\vi\eShopSolution.AdminApp.resources.dll
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\bin\Debug\net6.0\LazZiya.ExpressLocalization.dll
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\bin\Debug\net6.0\LazZiya.TagHelpers.dll
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\obj\Debug\net6.0\eShopSolution.AdminApp.LocalizationResources.ExpressLocalizationResource.en.resources
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\obj\Debug\net6.0\eShopSolution.AdminApp.LocalizationResources.ExpressLocalizationResource.vi.resources
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\obj\Debug\net6.0\eShopSolution.AdminApp.LocalizationResources.ViewLocalizationResource.en.resources
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\obj\Debug\net6.0\eShopSolution.AdminApp.LocalizationResources.ViewLocalizationResource.vi.resources
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\obj\Debug\net6.0\eShopSolution.AdminApp.csproj.GenerateResource.cache
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\obj\Debug\net6.0\eShopSolution.AdminApp.MvcApplicationPartsAssemblyInfo.cs
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\obj\Debug\net6.0\en\eShopSolution.AdminApp.resources.dll
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\obj\Debug\net6.0\vi\eShopSolution.AdminApp.resources.dll
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\obj\Debug\net6.0\eShopSolution.AdminApp.csproj.CopyComplete

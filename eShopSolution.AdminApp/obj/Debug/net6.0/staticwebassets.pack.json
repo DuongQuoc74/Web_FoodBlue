@@ -5,10 +5,6 @@
       "PackagePath": "staticwebassets\\eShopSolution.AdminApp.bundle.scp.css"
     },
     {
-      "Id": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopSolution.AdminApp\\wwwroot\\_framework\\aspnetcore-browser-refresh.js",
-      "PackagePath": "staticwebassets\\_framework\\aspnetcore-browser-refresh.js"
-    },
-    {
       "Id": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopSolution.AdminApp\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
@@ -51,6 +47,26 @@
     {
       "Id": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopSolution.AdminApp\\wwwroot\\images\\dashboard\\paypal.png",
       "PackagePath": "staticwebassets\\images\\dashboard\\paypal.png"
+    },
+    {
+      "Id": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopSolution.AdminApp\\wwwroot\\images\\faces-clipart\\admin.jfif",
+      "PackagePath": "staticwebassets\\images\\faces-clipart\\admin.jfif"
+    },
+    {
+      "Id": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopSolution.AdminApp\\wwwroot\\images\\faces-clipart\\pic-1.png",
+      "PackagePath": "staticwebassets\\images\\faces-clipart\\pic-1.png"
+    },
+    {
+      "Id": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopSolution.AdminApp\\wwwroot\\images\\faces-clipart\\pic-2.png",
+      "PackagePath": "staticwebassets\\images\\faces-clipart\\pic-2.png"
+    },
+    {
+      "Id": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopSolution.AdminApp\\wwwroot\\images\\faces-clipart\\pic-3.png",
+      "PackagePath": "staticwebassets\\images\\faces-clipart\\pic-3.png"
+    },
+    {
+      "Id": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopSolution.AdminApp\\wwwroot\\images\\faces-clipart\\pic-4.png",
+      "PackagePath": "staticwebassets\\images\\faces-clipart\\pic-4.png"
     },
     {
       "Id": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopSolution.AdminApp\\wwwroot\\images\\faces\\face1.jpg",

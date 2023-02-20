@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@{
+    var culture = CultureInfo.CurrentCulture.Name;
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Required meta tags -->
@@ -19,7 +22,7 @@
     <!-- Layout styles -->
     <link rel="stylesheet" href="/css/style.css">
     <!-- End layout styles -->
-    <link rel="shortcut icon" href="/images/favicon.png" />
+    <link rel="shortcut icon" href="/images/logo.svg" />
 </head>
 <body>
     <div class="container-scroller">
@@ -27,12 +30,12 @@
         <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="navbar-brand-wrapper d-flex align-items-center">
                 <a class="navbar-brand brand-logo" href="index.html">
-                    <img src="/images/logo.svg" alt="logo" class="logo-dark" />
+                    <img src="/images/faces-clipart/admin.jfif" alt="logo" class="logo-dark" style="width: calc(190px - 120px); height: 70px;" />
                 </a>
-                <a class="navbar-brand brand-logo-mini" href="index.html"><img src="/images/logo-mini.svg" alt="logo" /></a>
+                <a class="navbar-brand brand-logo-mini" href="index.html"><img src="/images/faces-clipart/pic-1.png" alt="logo" /></a>
             </div>
             <div class="navbar-menu-wrapper d-flex align-items-center flex-grow-1">
-                <h5 class="mb-0 font-weight-medium d-none d-lg-flex">Welcome stallar dashboard!</h5>
+                <h5 class="mb-0 font-weight-medium d-none d-lg-flex" localize-content>Welcome Admin dashboard!</h5>
                 <ul class="navbar-nav navbar-nav-right ml-auto">
                     <form class="search-form d-none d-md-block" action="#">
                         <i class="icon-magnifier"></i>
@@ -81,7 +84,13 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown language-dropdown d-none d-sm-flex align-items-center">
-                        <a class="nav-link d-flex align-items-center dropdown-toggle" id="LanguageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                        <div class="nav-item dropdown language-dropdown d-none d-sm-flex align-items-center">
+                            <language-nav class="nav-link d-flex "  language-label="NativeName"
+                                      cookie-handler-url="@(Url.Action("SetCultureCookie", "Home", new { area= "", cltr="{0}", returnUrl="{1}" }))">
+                        </language-nav>
+                        </div>
+                       
+                       @* <a class="nav-link d-flex align-items-center dropdown-toggle" id="LanguageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
                             <div class="d-inline-flex mr-3">
                                 <i class="flag-icon flag-icon-us"></i>
                             </div>
@@ -100,7 +109,7 @@
                             <a class="dropdown-item">
                                 <i class="flag-icon flag-icon-ru"></i> Russian
                             </a>
-                        </div>
+                        </div>*@
                     </li>
                     <li class="nav-item dropdown d-none d-xl-inline-flex user-dropdown">
                         <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
@@ -147,24 +156,36 @@
                         </a>
                     </li>
                     <li class="nav-item nav-category">
-                        <span class="nav-link">Dashboard</span>
+                        <span class="nav-link"><localize>Dashboard</localize></span>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">
-                            <span class="menu-title">Dashboard</span>
+                        <a class="nav-link" asp-action="Index" asp-controller="Home">
+                            <span class="menu-title" localize-content>Statistics</span>
                             <i class="icon-screen-desktop menu-icon"></i>
                         </a>
                     </li>
-                    <li class="nav-item nav-category"><span class="nav-link">UI Elements</span></li>
+                    <li class="nav-item nav-category"><span class="nav-link" localize-content>Menu</span></li>
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                            <span class="menu-title">Basic UI Elements</span>
+                            <span class="menu-title" localize-content>User Management</span>
                             <i class="icon-layers menu-icon"></i>
                         </a>
                         <div class="collapse" id="ui-basic">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html"localize-content>List User</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html" localize-content>Create User</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                            <span class="menu-title" localize-content>Product Management</span>
+                            <i class="icon-doc menu-icon"></i>
+                        </a>
+                        <div class="collapse" id="auth">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html" localize-content> List Product </a></li>
+                                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html" localize-content> Create Product </a></li>
                             </ul>
                         </div>
                     </li>
@@ -191,22 +212,6 @@
                             <span class="menu-title">Tables</span>
                             <i class="icon-grid menu-icon"></i>
                         </a>
-                    </li>
-                    <li class="nav-item nav-category"><span class="nav-link">Sample Pages</span></li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-                            <span class="menu-title">General Pages</span>
-                            <i class="icon-doc menu-icon"></i>
-                        </a>
-                        <div class="collapse" id="auth">
-                            <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
-                                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
-                                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
-                                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
-                                <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Blank Page </a></li>
-                            </ul>
-                        </div>
                     </li>
                     <li class="nav-item pro-upgrade">
                         <span class="nav-link">
