@@ -1,9 +1,20 @@
 using eShopSolution.AdminApp.LocalizationResources;
+using eShopSolution.ApiItergration;
 using LazZiya.ExpressLocalization;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Localization;
 using System.Globalization;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Login
+builder.Services.AddHttpClient();
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/Login/Index";
+        options.AccessDeniedPath = "/User/Forbidden/";
+    });
 
 // Add services to the container.
 //Mutiple Language
@@ -15,7 +26,7 @@ var cultures = new[]
 
             };
 // Mutiple Language End
-builder.Services.AddControllersWithViews()
+builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation()
     //.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginRequestValidator>())
              // Mutiple Language
              .AddExpressLocalization<ExpressLocalizationResource, ViewLocalizationResource>(ops =>
@@ -32,6 +43,10 @@ builder.Services.AddControllersWithViews()
                  };
              });
 //Mutiple Language End
+//Add API
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddTransient<ILoginApiClient, LoginApiClient>();
+
 
 
 var app = builder.Build();
@@ -39,6 +54,8 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
+    app.UseDeveloperExceptionPage();
+    app.UseMigrationsEndPoint();
     app.UseExceptionHandler("/Home/Error");
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
@@ -47,16 +64,23 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
+app.UseAuthentication();
 app.UseRouting();
-
 app.UseAuthorization();
 
 app.UseRequestLocalization();
 app.UseEndpoints(endpoints =>
 {
+
+ 
+
     endpoints.MapControllerRoute(
-        name: "default",
-        pattern: "{culture=vi}/{controller=Home}/{action=Index}/{id?}");
+        name: "Login",
+        pattern: "{culture=vi}/{controller=Login}/{action=Index}/{id?}");
+
+    //endpoints.MapControllerRoute(
+    //    name: "default",
+    //    pattern: "{culture=vi}/{controller=Home}/{action=Index}/{id?}");
 });
 
 app.Run();

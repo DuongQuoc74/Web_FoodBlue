@@ -1,0 +1,15 @@
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ApiItergration\bin\Debug\net6.0\eShopSolution.ApiItergration.deps.json
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ApiItergration\bin\Debug\net6.0\eShopSolution.ApiItergration.dll
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ApiItergration\bin\Debug\net6.0\eShopSolution.ApiItergration.pdb
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ApiItergration\bin\Debug\net6.0\eShopSolution.ViewModel.dll
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ApiItergration\bin\Debug\net6.0\eShopSolution.ViewModel.pdb
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ApiItergration\obj\Debug\net6.0\eShopSolution.ApiItergration.csproj.AssemblyReference.cache
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ApiItergration\obj\Debug\net6.0\eShopSolution.ApiItergration.GeneratedMSBuildEditorConfig.editorconfig
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ApiItergration\obj\Debug\net6.0\eShopSolution.ApiItergration.AssemblyInfoInputs.cache
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ApiItergration\obj\Debug\net6.0\eShopSolution.ApiItergration.AssemblyInfo.cs
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ApiItergration\obj\Debug\net6.0\eShopSolution.ApiItergration.csproj.CoreCompileInputs.cache
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ApiItergration\obj\Debug\net6.0\eShopSolution.ApiItergration.csproj.CopyComplete
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ApiItergration\obj\Debug\net6.0\eShopSolution.ApiItergration.dll
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ApiItergration\obj\Debug\net6.0\refint\eShopSolution.ApiItergration.dll
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ApiItergration\obj\Debug\net6.0\eShopSolution.ApiItergration.pdb
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ApiItergration\obj\Debug\net6.0\ref\eShopSolution.ApiItergration.dll

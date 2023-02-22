@@ -13,6 +13,17 @@
 
  - Swashbuckle.AspNetCore (BackendApi)
  - Microsoft.AspNetCore.Authentication.JwtBearer(BackendApi)
+ - Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation(BackendApi)
 
  - LazZiya.ExpressLocalization (WebAdmin)
  - LazZiya.TagHelpers(WebAdmin)
+ - Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation(WebAdmin)
+ - Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore(WebAdmin)
+ - Microsoft.IdentityModel.Logging(WebAdmin)
+ - Microsoft.IdentityModel.Tokens(WebAdmin)
+ - System.IdentityModel.Tokens.Jwt(WebAdmin)
+
+ - Microsoft.Extensions.Http (ApiIntergration)
+ - Microsoft.Extensions.Configuration.Abstractions (ApiIntergration)
+ - Microsoft.AspNetCore.Http.Abstractions (ApiIntergration)
+ - Newtonsoft.Json (ApiIntergration)

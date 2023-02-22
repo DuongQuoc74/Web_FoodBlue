@@ -129,6 +129,18 @@
     <value>Dashboard</value>
     <comment>_layout</comment>
   </data>
+  <data name="Hello! let's get started" xml:space="preserve">
+    <value>Hello! let's get started</value>
+    <comment>index/login</comment>
+  </data>
+  <data name="Icons" xml:space="preserve">
+    <value>Icons</value>
+    <comment>_lauout</comment>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+    <comment>_layout</comment>
+  </data>
   <data name="List Product" xml:space="preserve">
     <value>List Product</value>
     <comment>_layout</comment>
@@ -141,8 +153,24 @@
     <value>Menu</value>
     <comment>_layout</comment>
   </data>
+  <data name="PassWord:" xml:space="preserve">
+    <value>PassWord:</value>
+    <comment>Index/Login</comment>
+  </data>
   <data name="Product Management" xml:space="preserve">
     <value>Product Management</value>
+    <comment>_layout</comment>
+  </data>
+  <data name="Rememberme:" xml:space="preserve">
+    <value>Rememberme:</value>
+    <comment>index/login</comment>
+  </data>
+  <data name="Sign in to continue." xml:space="preserve">
+    <value>Sign in to continue.</value>
+    <comment>index/login</comment>
+  </data>
+  <data name="Sign Out" xml:space="preserve">
+    <value>Sign Out</value>
     <comment>_layout</comment>
   </data>
   <data name="Statistics" xml:space="preserve">
@@ -152,6 +180,10 @@
   <data name="User Management" xml:space="preserve">
     <value>User Management</value>
     <comment>_layout</comment>
+  </data>
+  <data name="User Name:" xml:space="preserve">
+    <value>User Name:</value>
+    <comment>Index/Login</comment>
   </data>
   <data name="Welcome Admin dashboard!" xml:space="preserve">
     <value>Welcome Admin dashboard!</value>

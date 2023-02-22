@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopSolution.AdminApp\\wwwroot\\images\\Language\\vietnam.png",
+      "PackagePath": "staticwebassets\\images\\Language\\vietnam.png"
+    },
+    {
       "Id": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopSolution.AdminApp\\wwwroot\\images\\dashboard\\alipay.png",
       "PackagePath": "staticwebassets\\images\\dashboard\\alipay.png"
     },

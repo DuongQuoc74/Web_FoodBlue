@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "adrLueKiTYqLdhxBN5wcLIxhe/jh6BZEa2Hk47LFah0=",
+  "Hash": "0aYX6A5kGXzAbbgJBVsgrDKipTpUzDxkKmkw6DNglkM=",
   "Source": "eShopSolution.AdminApp",
   "BasePath": "_content/eShopSolution.AdminApp",
   "Mode": "Default",
@@ -797,6 +797,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\favicon.png"
+    },
+    {
+      "Identity": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopSolution.AdminApp\\wwwroot\\images\\Language\\vietnam.png",
+      "SourceId": "eShopSolution.AdminApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopSolution.AdminApp\\wwwroot\\",
+      "BasePath": "_content/eShopSolution.AdminApp",
+      "RelativePath": "images/Language/vietnam.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Language\\vietnam.png"
     },
     {
       "Identity": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopSolution.AdminApp\\wwwroot\\images\\logo.svg",

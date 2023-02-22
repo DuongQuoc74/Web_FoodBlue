@@ -12,7 +12,7 @@ build_property.RootNamespace = eShopSolution.AdminApp
 build_property.ProjectDir = D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp
 build_property._RazorSourceGeneratorDebug = 
 
@@ -22,6 +22,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Data/Homes/File.Net/Projects/eShop_foodblue/eShopSolution.AdminApp/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Data/Homes/File.Net/Projects/eShop_foodblue/eShopSolution.AdminApp/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Data/Homes/File.Net/Projects/eShop_foodblue/eShopSolution.AdminApp/Views/Shared/Error.cshtml]
