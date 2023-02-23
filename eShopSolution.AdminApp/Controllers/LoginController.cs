@@ -11,6 +11,11 @@ using System.Security.Claims;
 using System.Text;
 using eShopsolution.Utilities.Constants;
 using Microsoft.AspNetCore.Authorization;
+using eShopSolution.ViewModel.Validator;
+using System.ComponentModel.DataAnnotations;
+using eShopSolution.AdminApp.LocalizationResources;
+using Microsoft.Extensions.Localization;
+using System.Reflection;
 
 namespace eShopSolution.AdminApp.Controllers
 {
@@ -19,10 +24,12 @@ namespace eShopSolution.AdminApp.Controllers
     {
         private readonly ILoginApiClient _loginApiClient;
         private readonly IConfiguration _configuration;
-        public LoginController(ILoginApiClient loginApiClient, IConfiguration configuration) 
+        private readonly IStringLocalizerFactory _localizerFactory;
+        public LoginController(ILoginApiClient loginApiClient, IConfiguration configuration, IStringLocalizerFactory localizerFactory) 
         { 
             _loginApiClient= loginApiClient;
             _configuration= configuration;
+            _localizerFactory= localizerFactory;
         }
         [HttpGet]
         [AllowAnonymous]  
@@ -34,15 +41,37 @@ namespace eShopSolution.AdminApp.Controllers
         }
         [HttpPost]
         [AllowAnonymous]
-        public async Task< IActionResult> Login( LoginRequest request )
+        public async Task< IActionResult> Index( LoginRequest request )
         {
-            if(!ModelState.IsValid) 
+            var validator = new LoginRequestValaditor();
+            var resultValidator = validator.Validate(request);
+
+            if (!resultValidator.IsValid)
+            {
+                var localizer = _localizerFactory.Create(nameof(ExpressLocalizationResource), 
+                    typeof(ExpressLocalizationResource).Assembly.GetName().Name);
+                var errorMessages = new Dictionary<string, string>
+                {
+                    {nameof(LoginRequest.UserName), localizer[ExpressLocalizationResource.Login.UserName]},
+                    {nameof(LoginRequest.Password),  localizer[ExpressLocalizationResource.Login.PassWord]},
+
+                };
+
+                // Thay thế chuỗi thông báo lỗi hiện tại bằng chuỗi mới
+                foreach (var failure in resultValidator.Errors)
+                {
+                    if (errorMessages.TryGetValue(failure.PropertyName, out var errorMessage))
+                    {
+                        ModelState.AddModelError(failure.PropertyName, errorMessage);
+                    }
+                }
                 return View(request);
+            }         
             var result = await _loginApiClient.AuthenticateAdmin(request);
             if (result.ResultObj ==null)
             {
                 ModelState.AddModelError("", result.Message);
-                return View();
+                return View(request);
             }
 
             var userPrincipal = this.ValidateToken(result.ResultObj);
@@ -61,7 +90,7 @@ namespace eShopSolution.AdminApp.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult>Logout()
+        public async Task<IActionResult>SignOut()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             //HttpContext.Session.Remove(SystemContants.Token);

@@ -1,6 +1,5 @@
 D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\bin\Debug\net6.0\appsettings.Development.json
 D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\bin\Debug\net6.0\appsettings.json
-D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\bin\Debug\net6.0\eShopSolution.AdminApp.staticwebassets.runtime.json
 D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\bin\Debug\net6.0\eShopSolution.AdminApp.exe
 D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\bin\Debug\net6.0\eShopSolution.AdminApp.deps.json
 D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\bin\Debug\net6.0\eShopSolution.AdminApp.runtimeconfig.json
@@ -12,18 +11,6 @@ D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\obj\Debug\
 D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\obj\Debug\net6.0\eShopSolution.AdminApp.AssemblyInfo.cs
 D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\obj\Debug\net6.0\eShopSolution.AdminApp.csproj.CoreCompileInputs.cache
 D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\obj\Debug\net6.0\eShopSolution.AdminApp.MvcApplicationPartsAssemblyInfo.cache
-D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\obj\Debug\net6.0\eShopSolution.AdminApp.RazorAssemblyInfo.cache
-D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\obj\Debug\net6.0\eShopSolution.AdminApp.RazorAssemblyInfo.cs
-D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\obj\Debug\net6.0\staticwebassets\msbuild.eShopSolution.AdminApp.Microsoft.AspNetCore.StaticWebAssets.props
-D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\obj\Debug\net6.0\staticwebassets\msbuild.build.eShopSolution.AdminApp.props
-D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.eShopSolution.AdminApp.props
-D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.eShopSolution.AdminApp.props
-D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\obj\Debug\net6.0\staticwebassets.pack.json
-D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\obj\Debug\net6.0\staticwebassets.build.json
-D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\obj\Debug\net6.0\staticwebassets.development.json
-D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\obj\Debug\net6.0\scopedcss\bundle\eShopSolution.AdminApp.styles.css
-D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\obj\Debug\net6.0\scopedcss\projectbundle\eShopSolution.AdminApp.bundle.scp.css
 D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\obj\Debug\net6.0\eShopSolution.AdminApp.dll
 D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\obj\Debug\net6.0\refint\eShopSolution.AdminApp.dll
 D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\obj\Debug\net6.0\eShopSolution.AdminApp.pdb
@@ -563,3 +550,8 @@ D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\bin\Debug\
 D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
 D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\bin\Debug\net6.0\eShopsolution.Utilities.dll
 D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\bin\Debug\net6.0\eShopsolution.Utilities.pdb
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\bin\Debug\net6.0\FluentValidation.dll
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.AdminApp\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll

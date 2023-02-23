@@ -15,6 +15,7 @@
  - Microsoft.AspNetCore.Authentication.JwtBearer(BackendApi)
  - Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation(BackendApi)
 
+ - FluentValidation.AspNetCore(WebAdmin, ViewModel)
  - LazZiya.ExpressLocalization (WebAdmin)
  - LazZiya.TagHelpers(WebAdmin)
  - Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation(WebAdmin)

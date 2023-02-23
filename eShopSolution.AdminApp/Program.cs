@@ -1,8 +1,11 @@
-using eShopSolution.AdminApp.LocalizationResources;
+﻿using eShopSolution.AdminApp.LocalizationResources;
 using eShopSolution.ApiItergration;
+using eShopSolution.ViewModel.Validator;
+using FluentValidation.AspNetCore;
 using LazZiya.ExpressLocalization;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Localization;
+using Microsoft.Extensions.Localization;
 using System.Globalization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -27,11 +30,12 @@ var cultures = new[]
             };
 // Mutiple Language End
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation()
-    //.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginRequestValidator>())
+             //Vadilator
+             //.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginRequestValaditor>())
              // Mutiple Language
              .AddExpressLocalization<ExpressLocalizationResource, ViewLocalizationResource>(ops =>
              {
-               
+
                  // Uncomment and set to true to use only route culture provider
                  ops.UseAllCultureProviders = false;
                  ops.ResourcesPath = "LocalizationResources";
@@ -41,7 +45,9 @@ builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation()
                      o.SupportedUICultures = cultures;
                      o.DefaultRequestCulture = new RequestCulture("vi");
                  };
-             });
+             })
+             .AddFluentValidation();
+
 //Mutiple Language End
 //Add API
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();

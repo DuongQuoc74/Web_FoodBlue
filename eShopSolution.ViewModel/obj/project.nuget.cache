@@ -1,10 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "DQCTWub4bqZ2Ld6uSjdpAaPKmtIilPgWjxjKwDWG2ZM5iRgsuHFtU3R83rBwn2NT3hgI4Ielaz5+Litn8SHp1A==",
+  "dgSpecHash": "yq6r7DVEKVAWB1OL945WBv3LXcUSCPsAKw1cnY0HC5q2MRddaTtmlgyqtW39nCnX4eulikirDVcTjnngvp52ug==",
   "success": true,
   "projectFilePath": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopSolution.ViewModel\\eShopSolution.ViewModel.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\duong\\.nuget\\packages\\fluentvalidation\\11.2.1\\fluentvalidation.11.2.1.nupkg.sha512",
+    "C:\\Users\\duong\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.2.2\\fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
+    "C:\\Users\\duong\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.2.1\\fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512",
     "C:\\Users\\duong\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "C:\\Users\\duong\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512",
     "C:\\Users\\duong\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
     "C:\\Users\\duong\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
   ],

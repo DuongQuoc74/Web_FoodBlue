@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "0VjDx6fgiZyFSxmaF6+394AcGzRkivEJAqnEVfiQa/HGwy/FhMs5DULVaEKwOHW417B7kmt/0bMB4ohdkWmgGA==",
+  "dgSpecHash": "Z0XnZzi1WDe7c91XbmqzJ8SiQlHhgcJFo3dO2PAZcaBeojG0E6vpsjE35hNEjpFInmcaKmy3U1mhJRsxmQFwyQ==",
   "success": true,
   "projectFilePath": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopSolution.Application\\eShopSolution.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\duong\\.nuget\\packages\\fluentvalidation\\11.2.1\\fluentvalidation.11.2.1.nupkg.sha512",
+    "C:\\Users\\duong\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.2.2\\fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
+    "C:\\Users\\duong\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.2.1\\fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512",
     "C:\\Users\\duong\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.0\\microsoft.aspnetcore.cryptography.internal.6.0.0.nupkg.sha512",
     "C:\\Users\\duong\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.0\\microsoft.aspnetcore.cryptography.keyderivation.6.0.0.nupkg.sha512",
     "C:\\Users\\duong\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
