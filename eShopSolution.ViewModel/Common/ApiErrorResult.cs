@@ -17,6 +17,7 @@ namespace eShopSolution.ViewModel.Common
         {
             IsSuccessed = false;
             Message = message;
+         
         }
 
 

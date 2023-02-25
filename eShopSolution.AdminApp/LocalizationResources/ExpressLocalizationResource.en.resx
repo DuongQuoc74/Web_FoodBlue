@@ -117,16 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Mật khẩu không được để trống!" xml:space="preserve">
+  <data name="Incorrect account or password!" xml:space="preserve">
+    <value>Incorrect account or password!</value>
+    <comment>authenticateAdmin/UserSevice</comment>
+  </data>
+  <data name="Password must not be left blank!" xml:space="preserve">
     <value>Password must not be left blank!</value>
     <comment>validation_login/index</comment>
   </data>
-  <data name="Tài khoản không tồn tại !" xml:space="preserve">
-    <value>The account does not exist !</value>
-    <comment>login/index</comment>
+  <data name="The password must be at least 8 characters!" xml:space="preserve">
+    <value>The password must be at least 8 characters!</value>
+    <comment>validation_login/index</comment>
   </data>
-  <data name="Tài khoản không được để trống!" xml:space="preserve">
-    <value>Accounts must not be left blank!</value>
+  <data name="This account is not granted access!" xml:space="preserve">
+    <value>This account is not granted access!</value>
+    <comment>authenticateAdmin/UserSevice</comment>
+  </data>
+  <data name="User name must not be left blank!" xml:space="preserve">
+    <value>User Name must not be left blank!</value>
     <comment>validation_login/index</comment>
   </data>
 </root>

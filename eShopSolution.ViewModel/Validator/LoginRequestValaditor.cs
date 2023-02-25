@@ -12,9 +12,9 @@ namespace eShopSolution.ViewModel.Validator
     {
         public LoginRequestValaditor()
         {
-            RuleFor(x => x.UserName).NotEmpty().WithMessage("Tài khoản không được để trống!");
-            RuleFor(x => x.Password).NotEmpty().WithMessage("Mật khẩu Không được để trống!")
-                .MinimumLength(8).WithMessage("Mật khẩu phải ít nhất 8 kí tự!");
+            RuleFor(x => x.UserName).NotEmpty().WithMessage("User name must not be left blank!");
+            RuleFor(x => x.Password).NotEmpty().WithMessage("Password must not be left blank!")
+                .MinimumLength(8).WithMessage("The password must be at least 8 characters!");
         }
     }
 }

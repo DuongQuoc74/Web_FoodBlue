@@ -25,11 +25,11 @@ namespace eShopSolution.Application.Systems.Users
         public async Task<ApiResult<string>> AuthenticateAdmin(LoginRequest request)
         {
             var user = await _userManager.FindByNameAsync(request.UserName);
-            if (user == null) return new ApiErrorResult<string>("Tài khoản không tồn tại !");
+            if (user == null) return new ApiErrorResult<string>("Incorrect account or password!");
             var result = await _signInManager.PasswordSignInAsync(user, request.Password, request.RememberMe, true);
-            if (!result.Succeeded) return new ApiErrorResult<string>("Tài khoản hoặc mật khẩu không đúng!");
+            if (!result.Succeeded) return new ApiErrorResult<string>("Incorrect account or password!");
             var role = await _userManager.GetRolesAsync(user);
-            if (role.Count == 0) return new ApiErrorResult<string>("Tài khoản này không được cấp quyền truy cập");
+            if (role.Count == 0) return new ApiErrorResult<string>("This account is not granted access!");
             var claims = new[]
             {
                 new Claim(ClaimTypes.Email, user.Email),

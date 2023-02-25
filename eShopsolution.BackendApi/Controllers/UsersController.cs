@@ -24,10 +24,7 @@ namespace eShopsolution.BackendApi.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
             var result = await _userService.AuthenticateAdmin(request);
-            if (string.IsNullOrEmpty(result.ResultObj))
-            {
-                return BadRequest(result);
-            }
+         
             return Ok(result);
         }
 

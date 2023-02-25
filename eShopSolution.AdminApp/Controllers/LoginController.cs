@@ -16,6 +16,7 @@ using System.ComponentModel.DataAnnotations;
 using eShopSolution.AdminApp.LocalizationResources;
 using Microsoft.Extensions.Localization;
 using System.Reflection;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace eShopSolution.AdminApp.Controllers
 {
@@ -43,34 +44,15 @@ namespace eShopSolution.AdminApp.Controllers
         [AllowAnonymous]
         public async Task< IActionResult> Index( LoginRequest request )
         {
-            var validator = new LoginRequestValaditor();
-            var resultValidator = validator.Validate(request);
 
-            if (!resultValidator.IsValid)
-            {
-                var localizer = _localizerFactory.Create(nameof(ExpressLocalizationResource), 
-                    typeof(ExpressLocalizationResource).Assembly.GetName().Name);
-                var errorMessages = new Dictionary<string, string>
-                {
-                    {nameof(LoginRequest.UserName), localizer[ExpressLocalizationResource.Login.UserName]},
-                    {nameof(LoginRequest.Password),  localizer[ExpressLocalizationResource.Login.PassWord]},
-
-                };
-
-                // Thay thế chuỗi thông báo lỗi hiện tại bằng chuỗi mới
-                foreach (var failure in resultValidator.Errors)
-                {
-                    if (errorMessages.TryGetValue(failure.PropertyName, out var errorMessage))
-                    {
-                        ModelState.AddModelError(failure.PropertyName, errorMessage);
-                    }
-                }
+            var localizer = this.Localizer(request,null);
+            if (localizer) 
                 return View(request);
-            }         
+            
             var result = await _loginApiClient.AuthenticateAdmin(request);
             if (result.ResultObj ==null)
             {
-                ModelState.AddModelError("", result.Message);
+                this.Localizer(request,result.Message);
                 return View(request);
             }
 
@@ -130,6 +112,60 @@ namespace eShopSolution.AdminApp.Controllers
             return principal;
         }
         //giải mã token end
+
+        //Localize
+        private bool Localizer(LoginRequest request, string errorMessage)
+        {
+           
+            var localizer = _localizerFactory.Create(nameof(ExpressLocalizationResource),
+                    typeof(ExpressLocalizationResource).Assembly.GetName().Name);
+
+            //View
+            var validator = new LoginRequestValaditor();
+            var resultValidator = validator.Validate(request);
+            if (!resultValidator.IsValid)
+            {
+                
+                var messages = new List<string>
+                {
+                    ExpressLocalizationResource.LoginRequest.UserName,
+                    ExpressLocalizationResource.LoginRequest.PassWord,
+                    ExpressLocalizationResource.LoginRequest.PassWordLength,
+                };
+                
+                foreach (var error in resultValidator.Errors)
+                {
+                    foreach(var message in messages)
+                    {
+                        if (message == error.ErrorMessage)
+                        {
+                            ModelState.AddModelError("", localizer[message]);
+                        }
+                    }
+                }
+                return true;
+            }
+
+            //API
+            if(!errorMessage.IsNullOrEmpty())
+            {
+                var messages = new List<string>
+                {
+                    ExpressLocalizationResource.LoginRequest.UserNameApi,
+                    ExpressLocalizationResource.LoginRequest.PassWordApi
+                };
+               foreach(var message in messages)
+                {
+                    if(message == errorMessage) 
+                    {
+                        ModelState.AddModelError("", localizer[message]);
+                    } 
+                }
+                return true;
+            }
+            return false;
+        }
+        //Localize and
 
 
     }
