@@ -1,0 +1,86 @@
+﻿@using eShopSolution.ViewModel.Common;
+
+@model PageResult<eShopSolution.ViewModel.System.Users.UserVM>
+
+@{
+    ViewData["Title"] = "List Users";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int stt = 1;
+}
+
+
+<div class="row">
+    <div class="col-lg-12 stretch-card grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Table with contextual classes</h4>
+                <p class="card-description">
+                    Add class <code>.table-{color}</code>
+                </p>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>
+                                Stt
+                            </th>
+                            <th>
+                                Use name
+                            </th>
+                            <th>
+                                Frist name
+                            </th>
+                            <th>
+                                Last Name
+
+                            </th>
+                            <th>
+                                Dob
+                            </th>
+                            <th>
+                                Email
+                            </th>
+                            <th>
+                                Phone Number
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Items)
+                        {
+                            <tr >
+                                <td>
+                                    @stt
+                                </td>
+                                
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.UserName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.FristName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.LastName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Dob)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Email)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.PhoneNumber)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                                    @*@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |*@
+                                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                                </td>
+                            </tr>
+                            stt++;
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

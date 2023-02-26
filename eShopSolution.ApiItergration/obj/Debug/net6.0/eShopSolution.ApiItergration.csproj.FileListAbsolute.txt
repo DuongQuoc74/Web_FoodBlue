@@ -13,3 +13,5 @@ D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ApiItergration\obj\
 D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ApiItergration\obj\Debug\net6.0\refint\eShopSolution.ApiItergration.dll
 D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ApiItergration\obj\Debug\net6.0\eShopSolution.ApiItergration.pdb
 D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ApiItergration\obj\Debug\net6.0\ref\eShopSolution.ApiItergration.dll
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ApiItergration\bin\Debug\net6.0\eShopsolution.Utilities.dll
+D:\Data\Homes\File.Net\Projects\eShop_foodblue\eShopSolution.ApiItergration\bin\Debug\net6.0\eShopsolution.Utilities.pdb

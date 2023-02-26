@@ -1,4 +1,5 @@
 ﻿using eShopSolution.Application.Systems.Users;
+using eShopSolution.ViewModel.Common;
 using eShopSolution.ViewModel.System.Users;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -36,6 +37,15 @@ namespace eShopsolution.BackendApi.Controllers
             var result = await _userService.Register(request);
             if(result.IsSuccessed==false)
                 return BadRequest(result.Message);
+            return Ok(result);
+        }
+
+        [HttpGet("pading")]
+        public async Task<IActionResult> GetPadingUser([FromQuery] PadingRequest request)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var result = await _userService.GetPadingRequest(request);
             return Ok(result);
         }
     }

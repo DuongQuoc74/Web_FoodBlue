@@ -138,6 +138,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopsolution.Utilities\\eShopsolution.Utilities.csproj": {
+                "projectPath": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopsolution.Utilities\\eShopsolution.Utilities.csproj"
+              },
               "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopSolution.ViewModel\\eShopSolution.ViewModel.csproj": {
                 "projectPath": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopSolution.ViewModel\\eShopSolution.ViewModel.csproj"
               }

@@ -47,11 +47,16 @@ builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation()
                  };
              })
              .AddFluentValidation();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+});
 
 //Mutiple Language End
 //Add API
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddTransient<ILoginApiClient, LoginApiClient>();
+builder.Services.AddTransient<IUserApiClient, UserApiClient>();
 
 
 
@@ -75,6 +80,7 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.UseRequestLocalization();
+app.UseSession();
 app.UseEndpoints(endpoints =>
 {
 

@@ -3113,7 +3113,8 @@
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
           "Microsoft.Extensions.Http": "6.0.0",
           "Newtonsoft.Json": "13.0.2",
-          "eShopSolution.ViewModel": "1.0.0"
+          "eShopSolution.ViewModel": "1.0.0",
+          "eShopsolution.Utilities": "1.0.0"
         },
         "runtime": {
           "eShopSolution.ApiItergration.dll": {}

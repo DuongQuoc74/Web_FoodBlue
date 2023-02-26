@@ -12,7 +12,8 @@
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
           "Microsoft.Extensions.Http": "6.0.0",
           "Newtonsoft.Json": "13.0.2",
-          "eShopSolution.ViewModel": "1.0.0"
+          "eShopSolution.ViewModel": "1.0.0",
+          "eShopsolution.Utilities": "1.0.0"
         },
         "runtime": {
           "eShopSolution.ApiItergration.dll": {}
@@ -119,6 +120,11 @@
       "System.IO.Pipelines/5.0.2": {},
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
       "System.Text.Encodings.Web/4.5.0": {},
+      "eShopsolution.Utilities/1.0.0": {
+        "runtime": {
+          "eShopsolution.Utilities.dll": {}
+        }
+      },
       "eShopSolution.ViewModel/1.0.0": {
         "dependencies": {
           "FluentValidation.AspNetCore": "11.2.2",
@@ -261,6 +267,11 @@
       "sha512": "sha512-Xg4G4Indi4dqP1iuAiMSwpiWS54ZghzR644OtsRCm/m/lBMG8dUBhLVN7hLm8NNrNTR+iGbshCPTwrvxZPlm4g==",
       "path": "system.text.encodings.web/4.5.0",
       "hashPath": "system.text.encodings.web.4.5.0.nupkg.sha512"
+    },
+    "eShopsolution.Utilities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "eShopSolution.ViewModel/1.0.0": {
       "type": "project",

@@ -48,6 +48,36 @@ namespace eShopSolution.Application.Systems.Users
             return new ApiSuccessResult<string>( new JwtSecurityTokenHandler().WriteToken(token) );
         }
 
+        public async Task<ApiResult<PageResult<UserVM>>> GetPadingRequest(PadingRequest request)
+        {
+            var users = _userManager.Users;
+            if( request.KeyWord!=null)
+            {
+                users = users.Where(x=>x.UserName.Contains(request.KeyWord) ||
+                x.PhoneNumber.Contains(request.KeyWord)|| x.Email.Contains(request.KeyWord));
+            };
+            var data = await users.Skip((request.PageIndex-1)*request.PageSize).Take(request.PageSize)
+                .Select(x=> new UserVM()
+                {
+                    Id=x.Id,
+                    UserName=x.UserName,
+                    FristName  = x.FirstName,
+                    LastName=x.LastName,
+                    PhoneNumber=x.PhoneNumber,
+                    Email=x.Email,
+                    Dob=x.Dob,
+                }).ToListAsync();
+
+            var pageResult = new PageResult<UserVM>()
+            {
+                Items = data,
+                PageIndex = request.PageIndex,
+                PageSize = request.PageSize,
+            };
+            return new ApiSuccessResult<PageResult<UserVM>>(pageResult);
+
+        }
+
         public async Task<ApiResult<bool>> Register(RegisterRequest request)
         {
             var user = await _userManager.FindByNameAsync(request.UserName);

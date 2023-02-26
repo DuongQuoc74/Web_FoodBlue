@@ -12,6 +12,7 @@ namespace eShopSolution.Application.Systems.Users
     {
         Task<ApiResult<string>> AuthenticateAdmin(LoginRequest request);
         Task<ApiResult<bool>> Register(RegisterRequest request);
-        
+        Task<ApiResult<PageResult<UserVM>>> GetPadingRequest(PadingRequest request);
+
     }
 }

@@ -172,7 +172,7 @@
                         </a>
                         <div class="collapse" id="ui-basic">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html"localize-content>List User</a></li>
+                                <li class="nav-item"> <a asp-controller="User" asp-action="index" class="nav-link" localize-content>List User</a></li>
                                 <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html" localize-content>Create User</a></li>
                             </ul>
                         </div>
@@ -184,7 +184,7 @@
                         </a>
                         <div class="collapse" id="auth">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html" localize-content> List Product </a></li>
+                                <li class="nav-item"> <a  class="nav-link"  localize-content> List Product </a></li>
                                 <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html" localize-content> Create Product </a></li>
                             </ul>
                         </div>
@@ -223,14 +223,14 @@
             <!-- partial -->
             <div class="main-panel">
                 <div class="content-wrapper">
-                    @RenderBody();
+                    @RenderBody()
                 </div>
                 <!-- content-wrapper ends -->
                 <!-- partial:partials/_footer.html -->
                 <footer class="footer">
                     <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                        <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com 2020</span>
-                        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a href="https://www.bootstrapdash.com/bootstrap-admin-template/" target="_blank">Bootstrap admin templates</a> from Bootstrapdash.com</span>
+                        <span class="text-muted d-block text-center text-sm-left d-sm-inline-block"></span>
+                        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">  <a href="https://www.bootstrapdash.com/bootstrap-admin-template/" target="_blank"></a></span>
                     </div>
                 </footer>
                 <!-- partial -->

@@ -63,11 +63,12 @@ namespace eShopSolution.AdminApp.Controllers
                 IsPersistent = false //khi đã đăng nhập thành công thì false nó sẽ  load lại trang web và bắt đăng nhập lại
             };
             //HttpContext.Session.SetString(SystemContants.DefaultLanguageId, _configuration[SystemContants.DefaultLanguageId]);
-            //HttpContext.Session.SetString(SystemContants.Token, result.ResultObj);
+
             await HttpContext.SignInAsync(
                 CookieAuthenticationDefaults.AuthenticationScheme,
                 userPrincipal,
                 authProperties);
+                 HttpContext.Session.SetString(SystemContants.Token, result.ResultObj);
             return RedirectToAction("Index","Home");
         }
 

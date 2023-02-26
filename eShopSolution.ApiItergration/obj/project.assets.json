@@ -303,6 +303,16 @@
           }
         }
       },
+      "eShopsolution.Utilities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/eShopsolution.Utilities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/eShopsolution.Utilities.dll": {}
+        }
+      },
       "eShopSolution.ViewModel/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -741,6 +751,11 @@
         "version.txt"
       ]
     },
+    "eShopsolution.Utilities/1.0.0": {
+      "type": "project",
+      "path": "../eShopsolution.Utilities/eShopsolution.Utilities.csproj",
+      "msbuildProject": "../eShopsolution.Utilities/eShopsolution.Utilities.csproj"
+    },
     "eShopSolution.ViewModel/1.0.0": {
       "type": "project",
       "path": "../eShopSolution.ViewModel/eShopSolution.ViewModel.csproj",
@@ -753,7 +768,8 @@
       "Microsoft.Extensions.Configuration.Abstractions >= 6.0.0",
       "Microsoft.Extensions.Http >= 6.0.0",
       "Newtonsoft.Json >= 13.0.2",
-      "eShopSolution.ViewModel >= 1.0.0"
+      "eShopSolution.ViewModel >= 1.0.0",
+      "eShopsolution.Utilities >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -783,6 +799,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopsolution.Utilities\\eShopsolution.Utilities.csproj": {
+              "projectPath": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopsolution.Utilities\\eShopsolution.Utilities.csproj"
+            },
             "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopSolution.ViewModel\\eShopSolution.ViewModel.csproj": {
               "projectPath": "D:\\Data\\Homes\\File.Net\\Projects\\eShop_foodblue\\eShopSolution.ViewModel\\eShopSolution.ViewModel.csproj"
             }
