@@ -117,9 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Comfirm Password" xml:space="preserve">
+    <value>Nhập lại mật khẩu</value>
+    <comment>registor/user</comment>
+  </data>
   <data name="Contact Admin" xml:space="preserve">
     <value>Liên hệ Admin</value>
     <comment>login/index</comment>
+  </data>
+  <data name="Create new users" xml:space="preserve">
+    <value>Tạo mới người dùng</value>
+    <comment>registor/user</comment>
   </data>
   <data name="Create Product" xml:space="preserve">
     <value>Tạo mới sản phẩm</value>
@@ -133,6 +141,14 @@
     <value>Bảng điểu khiển</value>
     <comment>-layout</comment>
   </data>
+  <data name="Dob" xml:space="preserve">
+    <value>Ngày sinh</value>
+    <comment>index/user</comment>
+  </data>
+  <data name="First name" xml:space="preserve">
+    <value>Tên</value>
+    <comment>index/user</comment>
+  </data>
   <data name="Hello! let's get started" xml:space="preserve">
     <value>Xin chào, Bắt đầu thôi!</value>
     <comment>index/login</comment>
@@ -140,6 +156,14 @@
   <data name="Language" xml:space="preserve">
     <value>Ngôn ngữ</value>
     <comment>_layout</comment>
+  </data>
+  <data name="Last name" xml:space="preserve">
+    <value>Họ</value>
+    <comment>index/user</comment>
+  </data>
+  <data name="List of users" xml:space="preserve">
+    <value>Danh sách người dùng</value>
+    <comment>index/user</comment>
   </data>
   <data name="List Product" xml:space="preserve">
     <value>Danh sách sản phẩm</value>
@@ -153,9 +177,25 @@
     <value>Danh Mục</value>
     <comment>_layout</comment>
   </data>
+  <data name="Options" xml:space="preserve">
+    <value>Tùy chọn</value>
+    <comment>Index/user</comment>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Mật khẩu</value>
+    <comment>registor/user</comment>
+  </data>
   <data name="PassWord:" xml:space="preserve">
     <value>Mật Khẩu:</value>
     <comment>index/login</comment>
+  </data>
+  <data name="Phone number" xml:space="preserve">
+    <value>Số điện thoại</value>
+    <comment>index/user</comment>
+  </data>
+  <data name="Please fill in the information below!" xml:space="preserve">
+    <value>Vui lòng điền thông tin bên dưới!</value>
+    <comment>registor/user</comment>
   </data>
   <data name="Product Management" xml:space="preserve">
     <value>Quản lí sản phẩm</value>
@@ -180,6 +220,10 @@
   <data name="User Management" xml:space="preserve">
     <value>Quản lí người dùng</value>
     <comment>_layout</comment>
+  </data>
+  <data name="User name" xml:space="preserve">
+    <value>Tài khoản</value>
+    <comment>index/user</comment>
   </data>
   <data name="User Name:" xml:space="preserve">
     <value>Tài Khoản:</value>

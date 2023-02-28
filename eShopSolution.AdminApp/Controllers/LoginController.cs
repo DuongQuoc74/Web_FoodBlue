@@ -76,7 +76,7 @@ namespace eShopSolution.AdminApp.Controllers
         public async Task<IActionResult>SignOut()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            //HttpContext.Session.Remove(SystemContants.Token);
+            HttpContext.Session.Remove(SystemContants.Token);
             return RedirectToAction("Index", "Login");
         }
 

@@ -36,5 +36,21 @@ namespace eShopSolution.ApiItergration
             var users = JsonConvert.DeserializeObject<ApiResult<PageResult<UserVM>>>(body);
             return users;
         }
+
+        public async Task<ApiResult<bool>> Register(RegisterRequest request)
+        {
+            
+            var client = _httpClientFactory.CreateClient();
+            client.BaseAddress = new Uri(_configuration[SystemContants.BaseAddress]);
+
+            var json = JsonConvert.SerializeObject(request);
+            var httpcontent = new StringContent(json, Encoding.UTF8,"application/json");
+
+            var reponse = await client.PostAsync("api/users/register",httpcontent);
+            var body = await reponse.Content.ReadAsStringAsync();
+            if (!reponse.IsSuccessStatusCode)
+                return JsonConvert.DeserializeObject<ApiErrorResult<bool>>(body);
+            return JsonConvert.DeserializeObject<ApiSuccessResult<bool>>(body); 
+        }
     }
 }

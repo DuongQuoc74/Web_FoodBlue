@@ -11,5 +11,6 @@ namespace eShopSolution.ApiItergration
     public interface IUserApiClient
     {
         Task<ApiResult<PageResult<UserVM>>> GetPadingUser(PadingRequest request);
+        Task<ApiResult<bool>> Register(RegisterRequest request);
     }
 }
