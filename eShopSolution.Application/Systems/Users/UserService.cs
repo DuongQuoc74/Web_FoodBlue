@@ -48,6 +48,16 @@ namespace eShopSolution.Application.Systems.Users
             return new ApiSuccessResult<string>( new JwtSecurityTokenHandler().WriteToken(token) );
         }
 
+        public async Task<ApiResult<bool>> Delete(Guid id)
+        {
+            var user = await _userManager.FindByIdAsync(id.ToString());
+            if (user == null)
+                return new ApiErrorResult<bool>("ID null!");
+             await _userManager.DeleteAsync(user);
+           
+            return new ApiSuccessResult<bool>();
+        }
+
         public async Task<ApiResult<PageResult<UserVM>>> GetPadingRequest(PadingRequest request)
         {
             var users = _userManager.Users;
@@ -78,15 +88,14 @@ namespace eShopSolution.Application.Systems.Users
 
         }
 
-        public async Task<ApiResult<bool>> Register(RegisterRequest request)
+        public async Task<ApiResult<string>> Register(RegisterRequest request)
         {
             var user = await _userManager.FindByNameAsync(request.UserName);
-            if (user != null) return new ApiErrorResult<bool>("Tài khoản đã tồn tại");
+            if (user != null) return new ApiErrorResult<string>("The account already exists!");
             var email =await _userManager.FindByEmailAsync(request.Email);
-            if (email != null) return new ApiErrorResult<bool>("Email đã tồn tại");
+            if (email != null) return new ApiErrorResult<string>("The email already exists!");
             var phone = await _userManager.Users.AnyAsync(x=>x.PhoneNumber== request.PhoneNumber);
-            if (phone == true) return new ApiErrorResult<bool>("Số điện thoại đã tồn tại");
-            if(request.Password!=request.ComfirmPassword) return new ApiErrorResult<bool>("Mật khẩu không khớp!");
+            if (phone) return new ApiErrorResult<string>("The phone number already exists!");
             user = new AppUser()
             {
                 UserName = request.UserName,
@@ -99,8 +108,8 @@ namespace eShopSolution.Application.Systems.Users
             };
 
             var result = await _userManager.CreateAsync(user, request.Password);
-            if (result.Succeeded==false) return new ApiErrorResult<bool>("Đăng kí tài khoản không thành công");
-            return new ApiSuccessResult<bool>();
+            if (result.Succeeded==false) return new ApiErrorResult<string>("Account registration failed!");
+            return new ApiSuccessResult<string>();
         }
     }
 }

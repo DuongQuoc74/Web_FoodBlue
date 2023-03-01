@@ -24,6 +24,23 @@ namespace eShopSolution.ApiItergration
             _httpClientFactory= httpClientFactory;
             _httpContextAccessor = httpContextAccessor;
         }
+
+        public async Task<ApiResult<bool>> Delete(Guid id)
+        {
+            
+            var client = _httpClientFactory.CreateClient();
+            client.BaseAddress = new Uri(_configuration[SystemContants.BaseAddress]);
+
+            var token = _httpContextAccessor.HttpContext.Session.GetString(SystemContants.Token);
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+            var reponse = await client.DeleteAsync($"api/users/{id}");
+            var body = await reponse.Content.ReadAsStringAsync();
+            if(!reponse.IsSuccessStatusCode) 
+                return JsonConvert.DeserializeObject<ApiErrorResult<bool>>(body);
+            return JsonConvert.DeserializeObject<ApiSuccessResult<bool>>(body);
+        }
+
         public async Task<ApiResult<PageResult<UserVM>>> GetPadingUser(PadingRequest request)
         {
             var session = _httpContextAccessor.HttpContext.Session.GetString(SystemContants.Token);
@@ -37,7 +54,7 @@ namespace eShopSolution.ApiItergration
             return users;
         }
 
-        public async Task<ApiResult<bool>> Register(RegisterRequest request)
+        public async Task<ApiResult<string>> Register(RegisterRequest request)
         {
             
             var client = _httpClientFactory.CreateClient();
@@ -49,8 +66,8 @@ namespace eShopSolution.ApiItergration
             var reponse = await client.PostAsync("api/users/register",httpcontent);
             var body = await reponse.Content.ReadAsStringAsync();
             if (!reponse.IsSuccessStatusCode)
-                return JsonConvert.DeserializeObject<ApiErrorResult<bool>>(body);
-            return JsonConvert.DeserializeObject<ApiSuccessResult<bool>>(body); 
+                return JsonConvert.DeserializeObject<ApiErrorResult<string>>(body);
+            return JsonConvert.DeserializeObject<ApiErrorResult<string>>(body);
         }
     }
 }

@@ -11,7 +11,8 @@ namespace eShopSolution.Application.Systems.Users
     public interface IUserService
     {
         Task<ApiResult<string>> AuthenticateAdmin(LoginRequest request);
-        Task<ApiResult<bool>> Register(RegisterRequest request);
+        Task<ApiResult< string>> Register(RegisterRequest request);
+        Task<ApiResult<bool>> Delete (Guid id);
         Task<ApiResult<PageResult<UserVM>>> GetPadingRequest(PadingRequest request);
 
     }

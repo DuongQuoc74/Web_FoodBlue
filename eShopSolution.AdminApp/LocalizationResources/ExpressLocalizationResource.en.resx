@@ -117,17 +117,81 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Account registration failed!" xml:space="preserve">
+    <value>Passwords must have at least one non alphanumeric character!</value>
+    <comment>register/RegisterService</comment>
+  </data>
+  <data name="Confirm Password is not match!" xml:space="preserve">
+    <value>Confirm Password is not match!</value>
+    <comment>validation_Register/index</comment>
+  </data>
+  <data name="Confirm that the password is not blank!" xml:space="preserve">
+    <value>Confirm that the password is not blank!</value>
+    <comment>validation_Register/index</comment>
+  </data>
+  <data name="Date of birth Must not exceed 100 years old!" xml:space="preserve">
+    <value>Date of birth Must not exceed 100 years old!</value>
+    <comment>validation_Register/index</comment>
+  </data>
+  <data name="Delete is success!" xml:space="preserve">
+    <value>Delete is success!</value>
+    <comment>delete/userControler</comment>
+  </data>
+  <data name="Email format not match!" xml:space="preserve">
+    <value>Email format not match!</value>
+    <comment>validation_Register/index</comment>
+  </data>
+  <data name="Email must not be left blank!" xml:space="preserve">
+    <value>Email must not be left blank!</value>
+    <comment>validation_Register/index</comment>
+  </data>
+  <data name="First name must not be blank!" xml:space="preserve">
+    <value>First name must not be blank!</value>
+    <comment>validation_Register/index</comment>
+  </data>
   <data name="Incorrect account or password!" xml:space="preserve">
     <value>Incorrect account or password!</value>
     <comment>authenticateAdmin/UserSevice</comment>
+  </data>
+  <data name="Last name must not be blank!" xml:space="preserve">
+    <value>Last name must not be blank!</value>
+    <comment>validation_Register/index</comment>
   </data>
   <data name="Password must not be left blank!" xml:space="preserve">
     <value>Password must not be left blank!</value>
     <comment>validation_login/index</comment>
   </data>
+  <data name="PhoneNumber must not be left blank!" xml:space="preserve">
+    <value>PhoneNumber must not be left blank!</value>
+    <comment>validation_Register/index</comment>
+  </data>
+  <data name="Please enter a valid number!" xml:space="preserve">
+    <value>Please enter a valid number!</value>
+    <comment>validation_Register/index</comment>
+  </data>
+  <data name="The account already exists!" xml:space="preserve">
+    <value>The account already exists!</value>
+    <comment>register/RegisterService</comment>
+  </data>
+  <data name="The email already exists!" xml:space="preserve">
+    <value>The email already exists!</value>
+    <comment>register/RegisterService</comment>
+  </data>
   <data name="The password must be at least 8 characters!" xml:space="preserve">
     <value>The password must be at least 8 characters!</value>
     <comment>validation_login/index</comment>
+  </data>
+  <data name="The phone number already exists!" xml:space="preserve">
+    <value>The phone number already exists!</value>
+    <comment>register/RegisterService</comment>
+  </data>
+  <data name="The phone number must be at least 10!" xml:space="preserve">
+    <value>The phone number must be at least 10!</value>
+    <comment>validation_Register/index</comment>
+  </data>
+  <data name="The user name must be at least 5!" xml:space="preserve">
+    <value>The user name must be at least 5</value>
+    <comment>validation_Register/index</comment>
   </data>
   <data name="This account is not granted access!" xml:space="preserve">
     <value>This account is not granted access!</value>

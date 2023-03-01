@@ -18,7 +18,8 @@ namespace eShopSolution.AdminApp.Controllers
             _userApiClient = userApiClient;
             _localizerFactory = localizerFactory;
         }
-        public async Task< IActionResult>Index(string keyWord, int pageIndex =1, int pageSize = 5)
+
+        public async Task< IActionResult>Index(string keyWord, int pageIndex =1, int pageSize = 10)
         {
             var request = new PadingRequest()
             {
@@ -29,6 +30,14 @@ namespace eShopSolution.AdminApp.Controllers
             var data = await _userApiClient.GetPadingUser(request);
             if(data == null)
                 return NotFound();
+            var deleteSuccess = TempData["DeleteSuccess"] as string;
+            if (deleteSuccess != null)
+            {
+                var localizer = _localizerFactory.Create(nameof(ExpressLocalizationResource),
+                    typeof(ExpressLocalizationResource).Assembly.GetName().Name);
+                ViewBag.DeleteSuccess = localizer[deleteSuccess];
+            }
+            
             return View(data.ResultObj);
         }
 
@@ -49,13 +58,39 @@ namespace eShopSolution.AdminApp.Controllers
             if (!result.IsSuccessed)
             {
                 this.LocalizerRegistor(request, result.Message);
-                return View(result);
+                return View(request);
             }
+            
             return RedirectToAction("Index", "User");
         }
 
-        //Localize and
+        [HttpGet]
+        public IActionResult Delete(Guid id, string userName)
+        {
+            var request = new DeleteRequest()
+            {
+                Id = id,
+                UserName = userName,
+               
+            };
+            return View(request);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Delete(DeleteRequest request)
+        {
+            var result = await _userApiClient.Delete(request.Id);
+            if (!result.IsSuccessed)
+            {
+                ModelState.AddModelError("",result.Message);
+                return View(request);
+            }
 
+            TempData["DeleteSuccess"] = "Delete is success!";
+            return RedirectToAction("Index", "User");
+
+        }
+
+        //Localize and
         private bool LocalizerRegistor(RegisterRequest request, string errorMessage)
         {
 
@@ -70,9 +105,24 @@ namespace eShopSolution.AdminApp.Controllers
 
                 var messages = new List<string>
                 {
-                    ExpressLocalizationResource.LoginRequest.UserName,
-                    ExpressLocalizationResource.LoginRequest.PassWord,
-                    ExpressLocalizationResource.LoginRequest.PassWordLength,
+                    ExpressLocalizationResource.RegisterRequest.UserName,
+                    ExpressLocalizationResource.RegisterRequest.UserNameLength,
+                    ExpressLocalizationResource.RegisterRequest.PassWord,
+                    ExpressLocalizationResource.RegisterRequest.PassWordLength,
+                    ExpressLocalizationResource.RegisterRequest.ConfirmPassWord,
+                    ExpressLocalizationResource.RegisterRequest.ConfirmPassWordNull,
+                    ExpressLocalizationResource.RegisterRequest.FirstName,
+                    ExpressLocalizationResource.RegisterRequest.LastName,
+                    ExpressLocalizationResource.RegisterRequest.Dob,
+                    ExpressLocalizationResource.RegisterRequest.Email,
+                    ExpressLocalizationResource.RegisterRequest.EmailFormat,
+                    ExpressLocalizationResource.RegisterRequest.PhoneNumber,
+                    ExpressLocalizationResource.RegisterRequest.PhoneNumberLength,
+                    ExpressLocalizationResource.RegisterRequest.PhoneNumberFormat,
+                 
+                    
+                    
+                    
                 };
 
                 foreach (var error in resultValidator.Errors)
@@ -92,9 +142,11 @@ namespace eShopSolution.AdminApp.Controllers
             if (!errorMessage.IsNullOrEmpty())
             {
                 var messages = new List<string>
-                {
-                    ExpressLocalizationResource.LoginRequest.UserNameApi,
-                    ExpressLocalizationResource.LoginRequest.PassWordApi
+                {  
+                    ExpressLocalizationResource.RegisterRequest.UserNameApi,
+                    ExpressLocalizationResource.RegisterRequest.EmailApi,
+                    ExpressLocalizationResource.RegisterRequest.PhoneNumberApi,
+                    ExpressLocalizationResource.RegisterRequest.AccoutCreate,
                 };
                 foreach (var message in messages)
                 {

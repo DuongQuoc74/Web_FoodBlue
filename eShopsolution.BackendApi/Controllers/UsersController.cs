@@ -33,10 +33,11 @@ namespace eShopsolution.BackendApi.Controllers
         [HttpPost("Register")]
         public async Task<IActionResult> Register([FromBody] RegisterRequest request)
         {
-            if (!ModelState.IsValid) return BadRequest(ModelState);
+            if (!ModelState.IsValid) 
+                return BadRequest(ModelState);
             var result = await _userService.Register(request);
-            if(result.IsSuccessed==false)
-                return BadRequest(result.Message);
+            //if (result.IsSuccessed == false)
+            //    return BadRequest(result.Message);
             return Ok(result);
         }
 
@@ -48,5 +49,16 @@ namespace eShopsolution.BackendApi.Controllers
             var result = await _userService.GetPadingRequest(request);
             return Ok(result);
         }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var result = await _userService.Delete(id);
+            if (!result.IsSuccessed)
+                return BadRequest(result);
+            return Ok(result);
+        }
+        
     }
 }
