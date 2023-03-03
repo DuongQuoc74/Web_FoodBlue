@@ -34,11 +34,26 @@ namespace eShopSolution.ApiItergration
             var token = _httpContextAccessor.HttpContext.Session.GetString(SystemContants.Token);
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
-            var reponse = await client.DeleteAsync($"api/users/{id}");
+            var reponse = await client.DeleteAsync($"/api/users/{id}");
             var body = await reponse.Content.ReadAsStringAsync();
             if(!reponse.IsSuccessStatusCode) 
                 return JsonConvert.DeserializeObject<ApiErrorResult<bool>>(body);
             return JsonConvert.DeserializeObject<ApiSuccessResult<bool>>(body);
+        }
+
+        public async Task<ApiResult<UserVM>> GetById(Guid id)
+        {
+            
+            var client = _httpClientFactory.CreateClient();
+            client.BaseAddress = new Uri(_configuration[SystemContants.BaseAddress]);
+            var session = _httpContextAccessor.HttpContext.Session.GetString(SystemContants.Token) ;
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", session);
+
+            var reponse = await client.GetAsync($"/api/users/{id}");
+            var body = await reponse.Content.ReadAsStringAsync();
+            if(!reponse.IsSuccessStatusCode)
+                return JsonConvert.DeserializeObject<ApiErrorResult<UserVM>>(body); 
+            return JsonConvert.DeserializeObject<ApiSuccessResult<UserVM>>(body) ;
         }
 
         public async Task<ApiResult<PageResult<UserVM>>> GetPadingUser(PadingRequest request)
@@ -48,7 +63,7 @@ namespace eShopSolution.ApiItergration
             client.BaseAddress = new Uri(_configuration[SystemContants.BaseAddress]);
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", session);
 
-            var reponse = await client.GetAsync($"api/users/pading?pageIndex={request.PageIndex}&pageSize={request.PageSize}&keyword={request.KeyWord}");
+            var reponse = await client.GetAsync($"/api/users/pading?pageIndex={request.PageIndex}&pageSize={request.PageSize}&keyword={request.KeyWord}");
             var body = await reponse.Content.ReadAsStringAsync();
             var users = JsonConvert.DeserializeObject<ApiResult<PageResult<UserVM>>>(body);
             return users;
@@ -63,11 +78,28 @@ namespace eShopSolution.ApiItergration
             var json = JsonConvert.SerializeObject(request);
             var httpcontent = new StringContent(json, Encoding.UTF8,"application/json");
 
-            var reponse = await client.PostAsync("api/users/register",httpcontent);
+            var reponse = await client.PostAsync("/api/users/register",httpcontent);
             var body = await reponse.Content.ReadAsStringAsync();
             if (!reponse.IsSuccessStatusCode)
                 return JsonConvert.DeserializeObject<ApiErrorResult<string>>(body);
             return JsonConvert.DeserializeObject<ApiErrorResult<string>>(body);
+        }
+
+        public async Task<ApiResult<string>> Update(Guid id, UpdateUserRequest request)
+        {
+            var client = _httpClientFactory.CreateClient();
+            client.BaseAddress = new Uri(_configuration[SystemContants.BaseAddress]);
+            var session = _httpContextAccessor.HttpContext.Session.GetString(SystemContants.Token);
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", session);
+            
+            var json = JsonConvert.SerializeObject(request);
+            var httpContent = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var reponse = await client.PutAsync($"/api/users/{id}", httpContent);
+            var body = await reponse.Content.ReadAsStringAsync();
+            if (!reponse.IsSuccessStatusCode)
+                return JsonConvert.DeserializeObject<ApiErrorResult<string>>(body);
+            return JsonConvert.DeserializeObject<ApiSuccessResult<string>>(body);
         }
     }
 }

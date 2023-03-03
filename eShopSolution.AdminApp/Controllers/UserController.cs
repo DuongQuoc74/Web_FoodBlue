@@ -30,12 +30,12 @@ namespace eShopSolution.AdminApp.Controllers
             var data = await _userApiClient.GetPadingUser(request);
             if(data == null)
                 return NotFound();
-            var deleteSuccess = TempData["DeleteSuccess"] as string;
-            if (deleteSuccess != null)
+            var result = TempData["result"] as string;
+            if (result != null)
             {
                 var localizer = _localizerFactory.Create(nameof(ExpressLocalizationResource),
                     typeof(ExpressLocalizationResource).Assembly.GetName().Name);
-                ViewBag.DeleteSuccess = localizer[deleteSuccess];
+                ViewBag.result = localizer[result];
             }
             
             return View(data.ResultObj);
@@ -85,9 +85,44 @@ namespace eShopSolution.AdminApp.Controllers
                 return View(request);
             }
 
-            TempData["DeleteSuccess"] = "Delete is success!";
+            TempData["result"] = "Delete is success!";
             return RedirectToAction("Index", "User");
 
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(Guid id)
+        {
+            var result = await _userApiClient.GetById(id);
+            if(result.ResultObj == null)
+                return View();
+            var user = result.ResultObj;
+            var updateRequest = new UpdateUserRequest()
+            {
+                FirstName = user.FristName,
+                LastName = user.LastName,
+                Dob = user.Dob,
+                Email = user.Email,
+                PhoneNumber = user.PhoneNumber,
+            };
+            return View(updateRequest);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Edit (UpdateUserRequest request)
+        {
+            var check = this.LocalizerUpadte(request, null);
+            if (check)
+                return View(request);
+            var result = await _userApiClient.Update(request.Id, request);
+            if (!result.IsSuccessed)
+            {
+                 this.LocalizerUpadte(request,result.Message);
+                return View(request);
+
+            }
+            TempData["result"] = result.Message;
+            return RedirectToAction("Index", "User");
+            
         }
 
         //Localize and
@@ -105,24 +140,20 @@ namespace eShopSolution.AdminApp.Controllers
 
                 var messages = new List<string>
                 {
-                    ExpressLocalizationResource.RegisterRequest.UserName,
-                    ExpressLocalizationResource.RegisterRequest.UserNameLength,
-                    ExpressLocalizationResource.RegisterRequest.PassWord,
-                    ExpressLocalizationResource.RegisterRequest.PassWordLength,
-                    ExpressLocalizationResource.RegisterRequest.ConfirmPassWord,
-                    ExpressLocalizationResource.RegisterRequest.ConfirmPassWordNull,
-                    ExpressLocalizationResource.RegisterRequest.FirstName,
-                    ExpressLocalizationResource.RegisterRequest.LastName,
-                    ExpressLocalizationResource.RegisterRequest.Dob,
-                    ExpressLocalizationResource.RegisterRequest.Email,
-                    ExpressLocalizationResource.RegisterRequest.EmailFormat,
-                    ExpressLocalizationResource.RegisterRequest.PhoneNumber,
-                    ExpressLocalizationResource.RegisterRequest.PhoneNumberLength,
-                    ExpressLocalizationResource.RegisterRequest.PhoneNumberFormat,
-                 
-                    
-                    
-                    
+                    ExpressLocalizationResource.User.RegisterRequest.UserName,
+                    ExpressLocalizationResource.User.RegisterRequest.UserNameLength,
+                    ExpressLocalizationResource.User.RegisterRequest.PassWord,
+                    ExpressLocalizationResource.User.RegisterRequest.PassWordLength,
+                    ExpressLocalizationResource.User.RegisterRequest.ConfirmPassWord,
+                    ExpressLocalizationResource.User.RegisterRequest.ConfirmPassWordNull,
+                    ExpressLocalizationResource.User.RegisterRequest.FirstName,
+                    ExpressLocalizationResource.User.RegisterRequest.LastName,
+                    ExpressLocalizationResource.User.RegisterRequest.Dob,
+                    ExpressLocalizationResource.User.RegisterRequest.Email,
+                    ExpressLocalizationResource.User.RegisterRequest.EmailFormat,
+                    ExpressLocalizationResource.User.RegisterRequest.PhoneNumber,
+                    ExpressLocalizationResource.User.RegisterRequest.PhoneNumberLength,
+                    ExpressLocalizationResource.User.RegisterRequest.PhoneNumberFormat,                         
                 };
 
                 foreach (var error in resultValidator.Errors)
@@ -143,10 +174,69 @@ namespace eShopSolution.AdminApp.Controllers
             {
                 var messages = new List<string>
                 {  
-                    ExpressLocalizationResource.RegisterRequest.UserNameApi,
-                    ExpressLocalizationResource.RegisterRequest.EmailApi,
-                    ExpressLocalizationResource.RegisterRequest.PhoneNumberApi,
-                    ExpressLocalizationResource.RegisterRequest.AccoutCreate,
+                    ExpressLocalizationResource.User.RegisterRequest.UserNameApi,
+                    ExpressLocalizationResource.User.RegisterRequest.EmailApi,
+                    ExpressLocalizationResource.User.RegisterRequest.PhoneNumberApi,
+                    ExpressLocalizationResource.User.RegisterRequest.AccoutCreate,
+                };
+                foreach (var message in messages)
+                {
+                    if (message == errorMessage)
+                    {
+                        ModelState.AddModelError("", localizer[message]);
+                    }
+                }
+                return true;
+            }
+            return false;
+        }
+
+        private bool LocalizerUpadte(UpdateUserRequest request, string errorMessage)
+        {
+
+            var localizer = _localizerFactory.Create(nameof(ExpressLocalizationResource),
+                    typeof(ExpressLocalizationResource).Assembly.GetName().Name);
+
+            //View
+            var validator = new UpdateUserRequestValidator();
+            var resultValidator = validator.Validate(request);
+            if (!resultValidator.IsValid)
+            {
+
+                var messages = new List<string>
+                {
+                    ExpressLocalizationResource.User.UpdateRequest.FirstName,
+                    ExpressLocalizationResource.User.UpdateRequest.LastName,
+                    ExpressLocalizationResource.User.UpdateRequest.Dob,
+                    ExpressLocalizationResource.User.UpdateRequest.Email,
+                    ExpressLocalizationResource.User.UpdateRequest.EmailFormat,
+                    ExpressLocalizationResource.User.UpdateRequest.PhoneNumber,
+                    ExpressLocalizationResource.User.UpdateRequest.PhoneNumberLength,
+                    ExpressLocalizationResource.User.UpdateRequest.PhoneNumberFormat,
+                };
+
+                foreach (var error in resultValidator.Errors)
+                {
+                    foreach (var message in messages)
+                    {
+                        if (message == error.ErrorMessage)
+                        {
+                            ModelState.AddModelError("", localizer[message]);
+                        }
+                    }
+                }
+                return true;
+            }
+
+            //API
+            if (!errorMessage.IsNullOrEmpty())
+            {
+                var messages = new List<string>
+                {
+                
+                    ExpressLocalizationResource.User.UpdateRequest.EmailApi,
+                    ExpressLocalizationResource.User.UpdateRequest.PhoneNumberApi,
+                  
                 };
                 foreach (var message in messages)
                 {

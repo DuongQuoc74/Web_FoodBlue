@@ -166,7 +166,7 @@
     <comment>validation_Register/index</comment>
   </data>
   <data name="Please enter a valid number!" xml:space="preserve">
-    <value>Vui lòng nhập số hợp lệ!</value>
+    <value>Vui lòng nhập số điện thoại hợp lệ!</value>
     <comment>validation_Register/index</comment>
   </data>
   <data name="The account already exists!" xml:space="preserve">
@@ -200,5 +200,13 @@
   <data name="User name must not be left blank!" xml:space="preserve">
     <value>Tên tài khoản không được để trống!</value>
     <comment>validation_LoginRequest</comment>
+  </data>
+  <data name="User update failed!" xml:space="preserve">
+    <value>Cập nhật không thành công!</value>
+    <comment>Edit/UserService</comment>
+  </data>
+  <data name="User update is successful!" xml:space="preserve">
+    <value>Cập nhật thành công!</value>
+    <comment>Edit/UserService</comment>
   </data>
 </root>

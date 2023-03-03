@@ -68,7 +68,7 @@ namespace eShopSolution.AdminApp.Controllers
                 CookieAuthenticationDefaults.AuthenticationScheme,
                 userPrincipal,
                 authProperties);
-                 HttpContext.Session.SetString(SystemContants.Token, result.ResultObj);
+                HttpContext.Session.SetString(SystemContants.Token, result.ResultObj);
             return RedirectToAction("Index","Home");
         }
 
@@ -129,9 +129,9 @@ namespace eShopSolution.AdminApp.Controllers
                 
                 var messages = new List<string>
                 {
-                    ExpressLocalizationResource.LoginRequest.UserName,
-                    ExpressLocalizationResource.LoginRequest.PassWord,
-                    ExpressLocalizationResource.LoginRequest.PassWordLength,
+                    ExpressLocalizationResource.User.LoginRequest.UserName,
+                    ExpressLocalizationResource.User.LoginRequest.PassWord,
+                    ExpressLocalizationResource.User.LoginRequest.PassWordLength,
                 };
                 
                 foreach (var error in resultValidator.Errors)
@@ -152,8 +152,8 @@ namespace eShopSolution.AdminApp.Controllers
             {
                 var messages = new List<string>
                 {
-                    ExpressLocalizationResource.LoginRequest.UserNameApi,
-                    ExpressLocalizationResource.LoginRequest.PassWordApi
+                    ExpressLocalizationResource.User.LoginRequest.UserNameApi,
+                    ExpressLocalizationResource.User.LoginRequest.PassWordApi
                 };
                foreach(var message in messages)
                 {

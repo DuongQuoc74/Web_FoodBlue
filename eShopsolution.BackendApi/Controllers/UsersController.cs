@@ -59,6 +59,25 @@ namespace eShopsolution.BackendApi.Controllers
                 return BadRequest(result);
             return Ok(result);
         }
+
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Edit (Guid id, UpdateUserRequest request)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var user = await _userService.Edit(id, request);
+            return Ok(user);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(Guid id)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var user = await _userService.GetById(id);
+            return Ok(user);
+        }
         
     }
 }

@@ -58,6 +58,42 @@ namespace eShopSolution.Application.Systems.Users
             return new ApiSuccessResult<bool>();
         }
 
+        public async Task<ApiResult<string>> Edit(Guid id, UpdateUserRequest request)
+        {
+           var email = await _userManager.Users.AnyAsync(x=>x.Id != id && x.Email==request.Email);
+            if (email)
+                return new ApiErrorResult<string>("The email already exists!");
+            var phoneNumber = await _userManager.Users.AnyAsync(x=>x.Id!=id && x.PhoneNumber==request.PhoneNumber);
+            if (phoneNumber)
+                return new ApiErrorResult<string>("The phone number already exists!");
+            var user = await _userManager.FindByIdAsync(id.ToString());
+            user.FirstName = request.FirstName;
+            user.LastName = request.LastName;
+            user.Dob=request.Dob;
+            user.Email = request.Email;
+            user.PhoneNumber = request.PhoneNumber;
+
+            var result = await _userManager.UpdateAsync(user);
+            if (!result.Succeeded)
+                return new ApiErrorResult<string>("User update failed!");
+            return new ApiSuccessResult<string>("User update is successful!");
+        }
+
+        public async Task<ApiResult<UserVM>> GetById(Guid id)
+        {
+            var user = await _userManager.FindByIdAsync(id.ToString());
+            var data = new UserVM()
+            {
+                FristName = user.FirstName,
+                LastName = user.LastName,
+                Dob = user.Dob,
+                Email = user.Email,
+                PhoneNumber = user.PhoneNumber,
+
+            };
+            return new ApiSuccessResult<UserVM>(data);
+        }
+
         public async Task<ApiResult<PageResult<UserVM>>> GetPadingRequest(PadingRequest request)
         {
             var users = _userManager.Users;

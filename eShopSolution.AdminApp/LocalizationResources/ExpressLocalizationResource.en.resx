@@ -166,7 +166,7 @@
     <comment>validation_Register/index</comment>
   </data>
   <data name="Please enter a valid number!" xml:space="preserve">
-    <value>Please enter a valid number!</value>
+    <value>Please enter a valid phone number!</value>
     <comment>validation_Register/index</comment>
   </data>
   <data name="The account already exists!" xml:space="preserve">
@@ -200,5 +200,13 @@
   <data name="User name must not be left blank!" xml:space="preserve">
     <value>User Name must not be left blank!</value>
     <comment>validation_login/index</comment>
+  </data>
+  <data name="User update failed!" xml:space="preserve">
+    <value>User update failed!</value>
+    <comment>Edit/UserService</comment>
+  </data>
+  <data name="User update is successful!" xml:space="preserve">
+    <value>User update is successful!</value>
+    <comment>Edit/UserService</comment>
   </data>
 </root>
