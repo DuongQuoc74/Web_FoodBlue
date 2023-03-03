@@ -19,7 +19,7 @@ namespace eShopSolution.ViewModel.Validator
             RuleFor(x => x.Email).NotEmpty().WithMessage("Email must not be left blank!")
                 .Matches(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$").WithMessage("Email format not match!");
 
-            RuleFor(x => x.PhoneNumber).NotEmpty().WithMessage("PhoneNumber must not be left blank!")
+            RuleFor(x => x.PhoneNumber).NotEmpty()
                 .MinimumLength(10).WithMessage("The phone number must be at least 10!")
                 .Must(BeAValidNumber).WithMessage("Please enter a valid number!");
         }

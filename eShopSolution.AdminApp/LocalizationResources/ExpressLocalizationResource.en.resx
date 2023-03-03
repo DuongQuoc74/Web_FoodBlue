@@ -129,6 +129,10 @@
     <value>Confirm that the password is not blank!</value>
     <comment>validation_Register/index</comment>
   </data>
+  <data name="Create user is success!" xml:space="preserve">
+    <value>Create user is success!</value>
+    <comment>register/UserController</comment>
+  </data>
   <data name="Date of birth Must not exceed 100 years old!" xml:space="preserve">
     <value>Date of birth Must not exceed 100 years old!</value>
     <comment>validation_Register/index</comment>

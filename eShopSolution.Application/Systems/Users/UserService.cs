@@ -76,7 +76,7 @@ namespace eShopSolution.Application.Systems.Users
             var result = await _userManager.UpdateAsync(user);
             if (!result.Succeeded)
                 return new ApiErrorResult<string>("User update failed!");
-            return new ApiSuccessResult<string>("User update is successful!");
+            return new ApiSuccessResult<string>();
         }
 
         public async Task<ApiResult<UserVM>> GetById(Guid id)

@@ -12,7 +12,7 @@
     <script>
         setTimeout(function () {
             $('#msgAlert').fadeOut('slow');
-        }, 2000);
+        }, 3000);
     </script>
 }
 <div class="row">
@@ -23,11 +23,11 @@
                 <p class="card-description">
                    
                 </p>
-                @if (ViewBag.DeleteSuccess != null)
+                @if (ViewBag.result != null)
                 {
                     <div class="row">
                         <div id="msgAlert" class="alert alert-success" role="alert">
-                            @ViewBag.DeleteSuccess
+                            @ViewBag.result
                         </div>
                     </div>
                 }

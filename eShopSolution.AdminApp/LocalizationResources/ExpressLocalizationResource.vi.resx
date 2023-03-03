@@ -129,6 +129,10 @@
     <value>Xác nhận mật khẩu không được để trống!</value>
     <comment>validation_Register/index</comment>
   </data>
+  <data name="Create user is success!" xml:space="preserve">
+    <value>Tạo mới người dùng thành công!</value>
+    <comment>register/UserController</comment>
+  </data>
   <data name="Date of birth Must not exceed 100 years old!" xml:space="preserve">
     <value>Ngày sinh không được vượt quá 100 tuổi!</value>
     <comment>validation_Register/index</comment>

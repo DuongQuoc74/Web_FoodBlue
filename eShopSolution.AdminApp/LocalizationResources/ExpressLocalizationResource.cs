@@ -34,6 +34,7 @@
                 public static string EmailApi => "The email already exists!";
                 public static string PhoneNumberApi => "The phone number already exists!";
                 public static string AccoutCreate => "Account registration failed!";
+                public static string CreateSuccess => "Create user is success!";
             }
             public class DeleteTemdata
             {

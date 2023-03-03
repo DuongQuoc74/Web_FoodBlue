@@ -60,7 +60,7 @@ namespace eShopSolution.AdminApp.Controllers
                 this.LocalizerRegistor(request, result.Message);
                 return View(request);
             }
-            
+            TempData["result"] = "Create user is success!";
             return RedirectToAction("Index", "User");
         }
 
@@ -120,7 +120,7 @@ namespace eShopSolution.AdminApp.Controllers
                 return View(request);
 
             }
-            TempData["result"] = result.Message;
+            TempData["result"] = "User update is successful!";
             return RedirectToAction("Index", "User");
             
         }
@@ -133,7 +133,7 @@ namespace eShopSolution.AdminApp.Controllers
                     typeof(ExpressLocalizationResource).Assembly.GetName().Name);
 
             //View
-            var validator = new RegistorRequestValidator();
+            var validator = new RegisterRequestValidator();
             var resultValidator = validator.Validate(request);
             if (!resultValidator.IsValid)
             {
