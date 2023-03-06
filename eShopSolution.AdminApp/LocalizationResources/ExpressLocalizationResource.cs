@@ -36,9 +36,10 @@
                 public static string AccoutCreate => "Account registration failed!";
                 public static string CreateSuccess => "Create user is success!";
             }
-            public class DeleteTemdata
+            public class Delete
             {
                 public static string DeleteSuccess = "Delete is success!";
+                public static string DeleteApi = "Can't delete this account!";
             }
 
             public class UpdateRequest

@@ -121,6 +121,10 @@
     <value>Mật khẩu phải có ít nhất 1 kí tự không phải chữ và số!</value>
     <comment>register/RegisterService</comment>
   </data>
+  <data name="Can't delete this account!" xml:space="preserve">
+    <value>Bạn không thế xóa tài khoản này!</value>
+    <comment>Delete/userService</comment>
+  </data>
   <data name="Confirm Password is not match!" xml:space="preserve">
     <value>Xác nhận mật khẩu không đúng!</value>
     <comment>validation_Register/index</comment>

@@ -125,6 +125,10 @@
     <value>Quay lại</value>
     <comment>delete/user</comment>
   </data>
+  <data name="Before" xml:space="preserve">
+    <value>Trước</value>
+    <comment>default/pager</comment>
+  </data>
   <data name="Comfirm Password" xml:space="preserve">
     <value>Nhập lại mật khẩu</value>
     <comment>registor/user</comment>
@@ -157,6 +161,10 @@
     <value>Ngày sinh</value>
     <comment>index/user</comment>
   </data>
+  <data name="First" xml:space="preserve">
+    <value>Đầu</value>
+    <comment>default/pager</comment>
+  </data>
   <data name="First name" xml:space="preserve">
     <value>Tên</value>
     <comment>index/user</comment>
@@ -168,6 +176,10 @@
   <data name="Language" xml:space="preserve">
     <value>Ngôn ngữ</value>
     <comment>_layout</comment>
+  </data>
+  <data name="Last" xml:space="preserve">
+    <value>Cuối</value>
+    <comment>default/pager</comment>
   </data>
   <data name="Last name" xml:space="preserve">
     <value>Họ</value>
@@ -188,6 +200,10 @@
   <data name="Menu" xml:space="preserve">
     <value>Danh Mục</value>
     <comment>_layout</comment>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Sau</value>
+    <comment>default/pager</comment>
   </data>
   <data name="Options" xml:space="preserve">
     <value>Tùy chọn</value>

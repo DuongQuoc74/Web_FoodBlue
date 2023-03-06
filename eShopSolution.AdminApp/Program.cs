@@ -84,11 +84,13 @@ app.UseSession();
 app.UseEndpoints(endpoints =>
 {
 
- 
+
 
     endpoints.MapControllerRoute(
-        name: "Login",
-        pattern: "{culture=vi}/{controller=Login}/{action=Index}/{id?}");
+        name: "default",
+         pattern: "{culture=vi}/{controller=Login}/{action=Index}/{id?}");
+
+    
 
     //endpoints.MapControllerRoute(
     //    name: "default",

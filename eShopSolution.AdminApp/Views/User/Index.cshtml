@@ -95,7 +95,7 @@
                                 </td>
                                 <td>
                                     @Html.ActionLink("Edit", "Edit", new { id =item.Id}) |
-                                    @Html.ActionLink("Assign", "RoleAssign", new { /* id=item.PrimaryKey */ }) |
+                                    @Html.ActionLink("Assign", "RoleAssign", new { id =item.Id }) |
                                     @Html.ActionLink("Delete", "Delete", new {  id=item.Id, userName=item.UserName })
                                 </td>
                             </tr>
@@ -103,6 +103,10 @@
                         }
                     </tbody>
                 </table>
+                <br />
+               <div style="position: absolute; right: 4%;">
+                    @await Component.InvokeAsync("Pager", Model)
+                </div>
             </div>
         </div>
     </div>

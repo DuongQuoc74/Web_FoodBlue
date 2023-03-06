@@ -78,6 +78,15 @@ namespace eShopsolution.BackendApi.Controllers
             var user = await _userService.GetById(id);
             return Ok(user);
         }
-        
+
+        [HttpGet("roles")]
+        public async Task<IActionResult> GetAllRoles()
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var roles = await _userService.GetAllRoles();
+            return Ok(roles);
+        }
+
     }
 }

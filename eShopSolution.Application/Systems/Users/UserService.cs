@@ -1,10 +1,12 @@
 ﻿using eShopSolution.Data.Entities;
 using eShopSolution.ViewModel.Common;
+using eShopSolution.ViewModel.System.Roles;
 using eShopSolution.ViewModel.System.Users;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -16,11 +18,14 @@ namespace eShopSolution.Application.Systems.Users
         private readonly IConfiguration _configuration;
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
-        public UserService(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, IConfiguration configuration)
+        private readonly RoleManager<AppRole> _roleManager;
+
+        public UserService(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, IConfiguration configuration, RoleManager<AppRole> roleManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _configuration = configuration;
+            _roleManager = roleManager;
         }
         public async Task<ApiResult<string>> AuthenticateAdmin(LoginRequest request)
         {
@@ -51,8 +56,8 @@ namespace eShopSolution.Application.Systems.Users
         public async Task<ApiResult<bool>> Delete(Guid id)
         {
             var user = await _userManager.FindByIdAsync(id.ToString());
-            if (user == null)
-                return new ApiErrorResult<bool>("ID null!");
+            if (user.UserName=="admin")
+                return new ApiErrorResult<bool>("Can't delete this account!");
              await _userManager.DeleteAsync(user);
            
             return new ApiSuccessResult<bool>();
@@ -79,9 +84,21 @@ namespace eShopSolution.Application.Systems.Users
             return new ApiSuccessResult<string>();
         }
 
+        public async Task<List<RoleVM>> GetAllRoles()
+        {
+            var roles = await _roleManager.Roles.Select(x => new RoleVM()
+            {
+                Name = x.Name,
+                Description = x.Description,
+                Id = x.Id
+            }).ToListAsync();
+            return roles;
+        }
+
         public async Task<ApiResult<UserVM>> GetById(Guid id)
         {
             var user = await _userManager.FindByIdAsync(id.ToString());
+            var roles = await _userManager.GetRolesAsync(user);
             var data = new UserVM()
             {
                 FristName = user.FirstName,
@@ -89,6 +106,7 @@ namespace eShopSolution.Application.Systems.Users
                 Dob = user.Dob,
                 Email = user.Email,
                 PhoneNumber = user.PhoneNumber,
+                Roles =roles
 
             };
             return new ApiSuccessResult<UserVM>(data);
@@ -102,6 +120,7 @@ namespace eShopSolution.Application.Systems.Users
                 users = users.Where(x=>x.UserName.Contains(request.KeyWord) ||
                 x.PhoneNumber.Contains(request.KeyWord)|| x.Email.Contains(request.KeyWord));
             };
+            var totalRow = await users.CountAsync();
             var data = await users.Skip((request.PageIndex-1)*request.PageSize).Take(request.PageSize)
                 .Select(x=> new UserVM()
                 {
@@ -119,6 +138,8 @@ namespace eShopSolution.Application.Systems.Users
                 Items = data,
                 PageIndex = request.PageIndex,
                 PageSize = request.PageSize,
+                TotalRecords = totalRow,
+                
             };
             return new ApiSuccessResult<PageResult<UserVM>>(pageResult);
 
@@ -146,6 +167,21 @@ namespace eShopSolution.Application.Systems.Users
             var result = await _userManager.CreateAsync(user, request.Password);
             if (result.Succeeded==false) return new ApiErrorResult<string>("Account registration failed!");
             return new ApiSuccessResult<string>();
+        }
+
+        public async Task<ApiResult<bool>> RoleAssign(Guid id, RoleAssignRequest request)
+        {
+            var user = await _userManager.FindByIdAsync(id.ToString());
+            var removeRoleAsign = request.Items.Where(x => x.Selected == false).Select(x => x.Name).ToList();
+           foreach(var roleName in removeRoleAsign)
+                if( await _userManager.IsInRoleAsync(user, roleName))
+                    await _userManager.RemoveFromRoleAsync(user, roleName);
+            var addRoleAsign = request.Items.Where(x => x.Selected == true).Select(x => x.Name).ToList();
+            foreach (var roleName in addRoleAsign)
+                if (await _userManager.IsInRoleAsync(user, roleName)==false)
+                    await _userManager.AddToRoleAsync(user, roleName);
+            return new ApiSuccessResult<bool>();
+
         }
     }
 }

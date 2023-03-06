@@ -1,4 +1,5 @@
 ﻿using eShopSolution.ViewModel.Common;
+using eShopSolution.ViewModel.System.Roles;
 using eShopSolution.ViewModel.System.Users;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,8 @@ namespace eShopSolution.Application.Systems.Users
         Task<ApiResult<string>> Edit (Guid id, UpdateUserRequest request);
         Task<ApiResult<PageResult<UserVM>>> GetPadingRequest(PadingRequest request);
         Task<ApiResult<UserVM>> GetById(Guid id);
+        Task<List<RoleVM>> GetAllRoles();
+        Task<ApiResult<bool>>RoleAssign(Guid id, RoleAssignRequest request);
 
     }
 }

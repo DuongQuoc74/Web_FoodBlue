@@ -121,6 +121,10 @@
     <value>Passwords must have at least one non alphanumeric character!</value>
     <comment>register/RegisterService</comment>
   </data>
+  <data name="Can't delete this account!" xml:space="preserve">
+    <value>Can't delete this account!</value>
+    <comment>Delete/userSevice</comment>
+  </data>
   <data name="Confirm Password is not match!" xml:space="preserve">
     <value>Confirm Password is not match!</value>
     <comment>validation_Register/index</comment>

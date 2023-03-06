@@ -1,5 +1,6 @@
 ﻿using eShopsolution.Utilities.Constants;
 using eShopSolution.ViewModel.Common;
+using eShopSolution.ViewModel.System.Roles;
 using eShopSolution.ViewModel.System.Users;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
@@ -39,6 +40,22 @@ namespace eShopSolution.ApiItergration
             if(!reponse.IsSuccessStatusCode) 
                 return JsonConvert.DeserializeObject<ApiErrorResult<bool>>(body);
             return JsonConvert.DeserializeObject<ApiSuccessResult<bool>>(body);
+        }
+
+        public async Task<ApiResult<List<RoleVM>>> GetAllRoles()
+        {
+            var client = _httpClientFactory.CreateClient();
+            client.BaseAddress = new Uri(_configuration[SystemContants.BaseAddress]);
+            var session = _httpContextAccessor.HttpContext.Session.GetString(SystemContants.Token) ;
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", session);
+
+            var reponse = await client.GetAsync("/api/users/roles");
+            var body  = await reponse.Content.ReadAsStringAsync();
+            if (!reponse.IsSuccessStatusCode)
+                return new ApiErrorResult< List<RoleVM>>(body);
+
+            List<RoleVM> rolesDeserializeObj  = (List<RoleVM>)JsonConvert.DeserializeObject(body, typeof(List<RoleVM>));
+            return new ApiSuccessResult<List<RoleVM>>(rolesDeserializeObj); 
         }
 
         public async Task<ApiResult<UserVM>> GetById(Guid id)

@@ -1,6 +1,7 @@
 ﻿using eShopSolution.AdminApp.LocalizationResources;
 using eShopSolution.ApiItergration;
 using eShopSolution.ViewModel.Common;
+using eShopSolution.ViewModel.System.Roles;
 using eShopSolution.ViewModel.System.Users;
 using eShopSolution.ViewModel.Validator;
 using Microsoft.AspNetCore.Mvc;
@@ -28,8 +29,6 @@ namespace eShopSolution.AdminApp.Controllers
                 PageSize = pageSize
             };
             var data = await _userApiClient.GetPadingUser(request);
-            if(data == null)
-                return NotFound();
             var result = TempData["result"] as string;
             if (result != null)
             {
@@ -81,8 +80,8 @@ namespace eShopSolution.AdminApp.Controllers
             var result = await _userApiClient.Delete(request.Id);
             if (!result.IsSuccessed)
             {
-                ModelState.AddModelError("",result.Message);
-                return View(request);
+                TempData["result"] = result.Message;
+                return RedirectToAction("Index", "User");
             }
 
             TempData["result"] = "Delete is success!";
@@ -123,6 +122,31 @@ namespace eShopSolution.AdminApp.Controllers
             TempData["result"] = "User update is successful!";
             return RedirectToAction("Index", "User");
             
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> RoleAssign(Guid id)
+        {
+            var user = await _userApiClient.GetById(id);
+            var roles = await _userApiClient.GetAllRoles();
+            var roleAssignRequest = new RoleAssignRequest();
+            foreach (var role in roles.ResultObj) 
+            {
+                roleAssignRequest.Items.Add( new SelectItem()
+                {
+                    Id = role.Id.ToString(),
+                    Name = role.Name,
+                    Selected=user.ResultObj.Roles.Contains(role.Name)
+                });
+            }
+            return View(roleAssignRequest);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> RoleAssign (RoleAssignRequest request)
+        {
+
+            return View();
         }
 
         //Localize and

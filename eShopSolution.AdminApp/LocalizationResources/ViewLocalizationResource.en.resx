@@ -125,6 +125,10 @@
     <value>Back to List</value>
     <comment>delete/user</comment>
   </data>
+  <data name="Before" xml:space="preserve">
+    <value>Before</value>
+    <comment>default/pager</comment>
+  </data>
   <data name="Comfirm Password" xml:space="preserve">
     <value>Comfirm Password</value>
     <comment>registor/user</comment>
@@ -157,6 +161,10 @@
     <value>Dob</value>
     <comment>index/user</comment>
   </data>
+  <data name="First" xml:space="preserve">
+    <value>First</value>
+    <comment>default/pager</comment>
+  </data>
   <data name="First name" xml:space="preserve">
     <value>First name</value>
     <comment>index/user</comment>
@@ -173,6 +181,10 @@
     <value>Language</value>
     <comment>_layout</comment>
   </data>
+  <data name="Last" xml:space="preserve">
+    <value>Last</value>
+    <comment>default/pager</comment>
+  </data>
   <data name="List of users" xml:space="preserve">
     <value>List of users</value>
     <comment>_index/User</comment>
@@ -188,6 +200,10 @@
   <data name="Menu" xml:space="preserve">
     <value>Menu</value>
     <comment>_layout</comment>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Next</value>
+    <comment>default/pager</comment>
   </data>
   <data name="Options" xml:space="preserve">
     <value>Options</value>

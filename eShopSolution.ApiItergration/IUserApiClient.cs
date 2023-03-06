@@ -1,4 +1,5 @@
 ﻿using eShopSolution.ViewModel.Common;
+using eShopSolution.ViewModel.System.Roles;
 using eShopSolution.ViewModel.System.Users;
 using System;
 using System.Collections.Generic;
@@ -15,5 +16,6 @@ namespace eShopSolution.ApiItergration
         Task<ApiResult<string>> Register(RegisterRequest request);
         Task<ApiResult<bool>> Delete(Guid id);
         Task<ApiResult<string>> Update(Guid id, UpdateUserRequest request);
+        Task <ApiResult<List<RoleVM>>>GetAllRoles();
     }
 }
