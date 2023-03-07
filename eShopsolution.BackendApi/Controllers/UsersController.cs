@@ -1,5 +1,6 @@
 ﻿using eShopSolution.Application.Systems.Users;
 using eShopSolution.ViewModel.Common;
+using eShopSolution.ViewModel.System.Roles;
 using eShopSolution.ViewModel.System.Users;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -86,6 +87,14 @@ namespace eShopsolution.BackendApi.Controllers
                 return BadRequest(ModelState);
             var roles = await _userService.GetAllRoles();
             return Ok(roles);
+        }
+        [HttpPut("{id}/RoleAssign")]
+        public async Task<IActionResult> RoleAssign (Guid id , RoleAssignRequest request)
+        {
+            if(!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var result = await _userService.RoleAssign(id, request);
+            return Ok(result);
         }
 
     }

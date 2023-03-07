@@ -121,6 +121,10 @@
     <value>Bạn chắc chắn muốn xóa tài khoản này?</value>
     <comment>delete/user</comment>
   </data>
+  <data name="Assign user" xml:space="preserve">
+    <value>Gán quyền cho người dùng</value>
+    <comment>RoleAssign/user</comment>
+  </data>
   <data name="Back to List" xml:space="preserve">
     <value>Quay lại</value>
     <comment>delete/user</comment>
@@ -225,6 +229,10 @@
     <value>Vui lòng điền thông tin bên dưới!</value>
     <comment>registor/user</comment>
   </data>
+  <data name="Please select below!" xml:space="preserve">
+    <value>Vui lòng chọn bên dưới!</value>
+    <comment>RoleAssign/user</comment>
+  </data>
   <data name="Product Management" xml:space="preserve">
     <value>Quản lí sản phẩm</value>
     <comment>_layout</comment>
@@ -232,6 +240,10 @@
   <data name="Rememberme:" xml:space="preserve">
     <value>Nhớ mật khẩu:</value>
     <comment>_layout</comment>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Tìm kiếm</value>
+    <comment>index/user</comment>
   </data>
   <data name="Sign in to continue." xml:space="preserve">
     <value>Đăng nhập để tiếp tục.</value>

@@ -117,7 +117,7 @@ namespace eShopSolution.Application.Systems.Users
             var users = _userManager.Users;
             if( request.KeyWord!=null)
             {
-                users = users.Where(x=>x.UserName.Contains(request.KeyWord) ||
+                users = users.Where(x=>x.UserName.Contains(request.KeyWord) ||x.FirstName.Contains(request.KeyWord)||
                 x.PhoneNumber.Contains(request.KeyWord)|| x.Email.Contains(request.KeyWord));
             };
             var totalRow = await users.CountAsync();

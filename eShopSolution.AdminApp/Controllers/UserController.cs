@@ -28,6 +28,7 @@ namespace eShopSolution.AdminApp.Controllers
                 PageIndex = pageIndex,
                 PageSize = pageSize
             };
+            ViewBag.KeyWord = keyWord;
             var data = await _userApiClient.GetPadingUser(request);
             var result = TempData["result"] as string;
             if (result != null)
@@ -145,8 +146,16 @@ namespace eShopSolution.AdminApp.Controllers
         [HttpPost]
         public async Task<IActionResult> RoleAssign (RoleAssignRequest request)
         {
+            var result = await _userApiClient.RoleAssign(request.Id, request);
+            if (!result.IsSuccessed)
+            {
+                TempData["result"] = "Assign is fail!";
+                return RedirectToAction("Index", "User");
+            }
 
-            return View();
+
+            TempData["result"] = "Assign is success!";
+            return RedirectToAction("Index", "User");
         }
 
         //Localize and

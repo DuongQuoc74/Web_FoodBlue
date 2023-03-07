@@ -5,30 +5,31 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>RoleAssign</h1>
+<h1 localize-content>Assign user</h1>
 
-<h4>RoleAssignRequest</h4>
+<h4 localize-content>Please select below!</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="RoleAssign">
+        <form asp-action="RoleAssign" asp-controller="User" method="post" >
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            @foreach(var role in Model.Items)
+            @for(var i =0; i<Model.Items.Count; i++)
             {
-                <div class="form-group">
-                    @role.Name
-                    <input type="checkbox" asp-for="@role.Selected" />
-                </div>
+                @Model.Items[i].Name
+                <input type="checkbox" asp-for="@Model.Items[i].Selected" />
+                <input type="hidden" asp-for="@Model.Items[i].Id" />
+                <input type="hidden" asp-for="@Model.Items[i].Name" />
             }
+            <br />
+            <br />
 
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-action="Index" localize-content>Back to List</a>
             </div>
+           
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 

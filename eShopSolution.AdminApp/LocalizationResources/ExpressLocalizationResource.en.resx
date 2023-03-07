@@ -121,6 +121,14 @@
     <value>Passwords must have at least one non alphanumeric character!</value>
     <comment>register/RegisterService</comment>
   </data>
+  <data name="Assign is fail!" xml:space="preserve">
+    <value>Assign is fail!</value>
+    <comment>RoleAssign/UserController</comment>
+  </data>
+  <data name="Assign is success!" xml:space="preserve">
+    <value>Assign is success!</value>
+    <comment>RoleAssign/UserController</comment>
+  </data>
   <data name="Can't delete this account!" xml:space="preserve">
     <value>Can't delete this account!</value>
     <comment>Delete/userSevice</comment>

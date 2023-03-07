@@ -102,6 +102,23 @@ namespace eShopSolution.ApiItergration
             return JsonConvert.DeserializeObject<ApiErrorResult<string>>(body);
         }
 
+        public async Task<ApiResult<bool>> RoleAssign(Guid id,RoleAssignRequest request)
+        {
+            var client = _httpClientFactory.CreateClient();
+            client.BaseAddress = new Uri(_configuration[SystemContants.BaseAddress]);
+            var session = _httpContextAccessor.HttpContext.Session.GetString(SystemContants.Token);
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer",session);
+
+            var json= JsonConvert.SerializeObject(request);
+            var httpContent = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var reponse = await client.PutAsync($"/api/users/{id}/roleAssign", httpContent);
+            var body = await reponse.Content.ReadAsStringAsync();
+            if(!reponse.IsSuccessStatusCode)
+                return JsonConvert.DeserializeObject<ApiErrorResult<bool>>(body);
+            return JsonConvert.DeserializeObject<ApiSuccessResult<bool>>(body);
+        }
+
         public async Task<ApiResult<string>> Update(Guid id, UpdateUserRequest request)
         {
             var client = _httpClientFactory.CreateClient();

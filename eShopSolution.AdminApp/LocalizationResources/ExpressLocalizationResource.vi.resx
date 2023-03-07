@@ -121,6 +121,14 @@
     <value>Mật khẩu phải có ít nhất 1 kí tự không phải chữ và số!</value>
     <comment>register/RegisterService</comment>
   </data>
+  <data name="Assign is fail!" xml:space="preserve">
+    <value>Gán quyền thất bại!</value>
+    <comment>RoleAssign/UserController</comment>
+  </data>
+  <data name="Assign is success!" xml:space="preserve">
+    <value>Gán quyền thành công!</value>
+    <comment>RoleAssign/UserController</comment>
+  </data>
   <data name="Can't delete this account!" xml:space="preserve">
     <value>Bạn không thế xóa tài khoản này!</value>
     <comment>Delete/userService</comment>

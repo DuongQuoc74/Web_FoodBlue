@@ -121,6 +121,10 @@
     <value>Are you sure you want to delete this?</value>
     <comment>delete/user</comment>
   </data>
+  <data name="Assign user" xml:space="preserve">
+    <value>Assign user</value>
+    <comment>RoleAssign/user</comment>
+  </data>
   <data name="Back to List" xml:space="preserve">
     <value>Back to List</value>
     <comment>delete/user</comment>
@@ -225,6 +229,10 @@
     <value>Please fill in the information below!</value>
     <comment>registor/user</comment>
   </data>
+  <data name="Please select below!" xml:space="preserve">
+    <value>Please select below!</value>
+    <comment>RoleAssign/user</comment>
+  </data>
   <data name="Product Management" xml:space="preserve">
     <value>Product Management</value>
     <comment>_layout</comment>
@@ -232,6 +240,10 @@
   <data name="Rememberme:" xml:space="preserve">
     <value>Rememberme:</value>
     <comment>index/login</comment>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+    <comment>index/user</comment>
   </data>
   <data name="Sign in to continue." xml:space="preserve">
     <value>Sign in to continue.</value>

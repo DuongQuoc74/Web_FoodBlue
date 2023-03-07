@@ -17,5 +17,6 @@ namespace eShopSolution.ApiItergration
         Task<ApiResult<bool>> Delete(Guid id);
         Task<ApiResult<string>> Update(Guid id, UpdateUserRequest request);
         Task <ApiResult<List<RoleVM>>>GetAllRoles();
+        Task<ApiResult<bool>> RoleAssign(Guid id,RoleAssignRequest request);
     }
 }
