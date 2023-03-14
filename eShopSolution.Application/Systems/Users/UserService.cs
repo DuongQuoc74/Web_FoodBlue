@@ -112,7 +112,7 @@ namespace eShopSolution.Application.Systems.Users
             return new ApiSuccessResult<UserVM>(data);
         }
 
-        public async Task<ApiResult<PageResult<UserVM>>> GetPadingRequest(PadingRequest request)
+        public async Task<ApiResult<PageResult<UserVM>>> GetAllPagings(PadingRequest request)
         {
             var users = _userManager.Users;
             if( request.KeyWord!=null)

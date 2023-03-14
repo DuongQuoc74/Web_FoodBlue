@@ -47,7 +47,7 @@ namespace eShopsolution.BackendApi.Controllers
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
-            var result = await _userService.GetPadingRequest(request);
+            var result = await _userService.GetAllPagings(request);
             return Ok(result);
         }
         [HttpDelete("{id}")]

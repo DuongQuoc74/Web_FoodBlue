@@ -73,7 +73,7 @@ namespace eShopSolution.ApiItergration
             return JsonConvert.DeserializeObject<ApiSuccessResult<UserVM>>(body) ;
         }
 
-        public async Task<ApiResult<PageResult<UserVM>>> GetPadingUser(PadingRequest request)
+        public async Task<ApiResult<PageResult<UserVM>>> GetAllPagings(PadingRequest request)
         {
             var session = _httpContextAccessor.HttpContext.Session.GetString(SystemContants.Token);
             var client = _httpClientFactory.CreateClient();

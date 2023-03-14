@@ -29,7 +29,7 @@ namespace eShopSolution.AdminApp.Controllers
                 PageSize = pageSize
             };
             ViewBag.KeyWord = keyWord;
-            var data = await _userApiClient.GetPadingUser(request);
+            var data = await _userApiClient.GetAllPagings(request);
             var result = TempData["result"] as string;
             if (result != null)
             {

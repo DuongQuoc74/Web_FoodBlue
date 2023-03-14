@@ -257,6 +257,10 @@
     <value>Statistics</value>
     <comment>_layout</comment>
   </data>
+  <data name="Update User" xml:space="preserve">
+    <value>Update User</value>
+    <comment>edit/user</comment>
+  </data>
   <data name="User Management" xml:space="preserve">
     <value>User Management</value>
     <comment>_layout</comment>

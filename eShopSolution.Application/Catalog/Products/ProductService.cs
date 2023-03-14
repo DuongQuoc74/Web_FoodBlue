@@ -106,7 +106,7 @@ namespace eShopSolution.Application.Catalog.Products
                 Stock = product != null ? product.Stock : null,
                 ViewCout = product != null ? product.ViewCout : null,
                 DateCreate = product != null ? product.DateCreate : null,
-                IsFeatured= product !=null ? product.IsFeartured : null,
+                IsFeatured = product != null ? product.IsFeartured : null,
 
                 Name = productTranslation != null ? productTranslation.Name : null,
                 Title = productTranslation != null ? productTranslation.Title : null,
@@ -137,7 +137,7 @@ namespace eShopSolution.Application.Catalog.Products
 
         public async Task<int> DeleteProduct(int ProductId)
         {
-           var product = await _context.Products.FindAsync(ProductId);
+            var product = await _context.Products.FindAsync(ProductId);
             if (product == null)
                 throw new EShopException("ID sản phẩm không hợp lệ!");
             var images = _context.ProductImages.Where(x => x.ProductId == ProductId);
@@ -145,37 +145,72 @@ namespace eShopSolution.Application.Catalog.Products
             {
                 await _storageService.DeleteFileAsync(image.ImagePath);
             }
-              _context.Products.Remove(product);
+            _context.Products.Remove(product);
             return await _context.SaveChangesAsync();
-                
+
         }
 
         public async Task<int> UpdateProduct(ProductUpdateRequest request)
         {
             var product = await _context.Products.FindAsync(request.ProductId);
-            var productTranslation = await _context.ProductTranslations.FirstOrDefaultAsync(x=>x.ProductId== request.ProductId && x.LanguageId == request.LanguageId);
+            var productTranslation = await _context.ProductTranslations.FirstOrDefaultAsync(x => x.ProductId == request.ProductId && x.LanguageId == request.LanguageId);
             if (product == null || productTranslation == null)
                 throw new EShopException("Không tìm thấy sản phẩm!");
             product.IsFeartured = request.IsFeartured;
-            productTranslation.Name= request.Name;
-            productTranslation.Description= request.Description;
-            productTranslation.Title= request.Title;
-            productTranslation.Detail= request.Detail;
+            productTranslation.Name = request.Name;
+            productTranslation.Description = request.Description;
+            productTranslation.Title = request.Title;
+            productTranslation.Detail = request.Detail;
 
             if (request.ThumbNailImage != null)
             {
-                var image= await _context.ProductImages.FirstOrDefaultAsync(x=>x.ProductId==request.ProductId);
-                if(image!=null)
+                var image = await _context.ProductImages.FirstOrDefaultAsync(x => x.ProductId == request.ProductId);
+                if (image != null)
                 {
                     image.FileSize = request.ThumbNailImage.Length;
-                    image.ImagePath=await this.SaveFile(request.ThumbNailImage);
-                  await  _context.SaveChangesAsync();
+                    image.ImagePath = await this.SaveFile(request.ThumbNailImage);
+                    await _context.SaveChangesAsync();
                 }
             }
             return await _context.SaveChangesAsync();
-            
+
         }
 
-       
+        public async Task<PageResult<ProductVM>> GetAllPagings(GetPagingProductRequest request)
+        {
+            var query = from p in _context.Products
+                        join pt in _context.ProductTranslations on p.Id equals pt.ProductId
+                        join pi in _context.ProductImages on p.Id equals pi.ProductId into ppi from pi in ppi.DefaultIfEmpty()
+                        where pt.LanguageId == request.languageId
+                        select new { p, pt, pi };
+
+            if (!string.IsNullOrEmpty(request.KeyWord))
+                query = query.Where(x => x.pt.Name.Contains(request.KeyWord) || x.p.Id.Equals(request.KeyWord) );
+
+            var totalRow = await query.CountAsync();
+            var products = await query.Skip((request.PageIndex - 1) * request.PageSize).Take(request.PageSize)
+                .Select(x => new ProductVM()
+                {
+                    ProductId = x.p.Id,
+                    Price = x.p.Price,
+                    OriginalPrice = x.p.OriginalPrice,
+                    Stock =x.p.Stock,
+                    IsFeatured = x.p.IsFeartured,
+                    Name = x.pt.Name,
+                    ThumbnailImage = x.pi.ImagePath
+
+                }).ToListAsync();
+
+            var pageResult = new PageResult<ProductVM>()
+            {
+                TotalRecords = totalRow,
+                PageIndex = request.PageIndex,
+                PageSize = request.PageSize,
+                Items = products
+            };
+            return pageResult;
+
+        }
     }
 }
+

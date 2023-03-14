@@ -15,7 +15,7 @@ namespace eShopSolution.Application.Systems.Users
         Task<ApiResult< string>> Register(RegisterRequest request);
         Task<ApiResult<bool>> Delete (Guid id);
         Task<ApiResult<string>> Edit (Guid id, UpdateUserRequest request);
-        Task<ApiResult<PageResult<UserVM>>> GetPadingRequest(PadingRequest request);
+        Task<ApiResult<PageResult<UserVM>>> GetAllPagings(PadingRequest request);
         Task<ApiResult<UserVM>> GetById(Guid id);
         Task<List<RoleVM>> GetAllRoles();
         Task<ApiResult<bool>>RoleAssign(Guid id, RoleAssignRequest request);
